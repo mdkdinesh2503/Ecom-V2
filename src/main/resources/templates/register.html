@@ -1,0 +1,104 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title name  -->
+    <title> Shopie.Register </title>
+
+    <!-- Title logo link  -->
+    <link rel="icon" type="image/x-icon" href="./images/Head_logo.png">
+
+    <!-- Font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Font style poppins link -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+
+    <!-- Font style connection link -->
+    <link rel="stylesheet" th:href="@{./style.css}">
+
+</head>
+
+<body>
+
+    <!-- Header section starts here -->
+    <header>
+
+        <a class="header-logo" href="/"> <img src="./images/Header_logo.png" alt="Header Logo" title="Shop">
+            <p class="header-name">Shopie.</p>
+        </a>
+
+        <nav class="nav-bar">
+            <a href="/"><i class="fas fa-home"></i> Home</a>
+            <a href="/product"><i class="fas fa-shopping-bag"></i> Products</a>
+            <a href="/contact"><i class="fas fa-address-book"></i> Contact</a>
+        </nav>
+
+        <div class="icon-container">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <img id="search-btn" src="./images/Header_Search.png" alt="Header Search" title="Search">
+            <img id="cart-btn" src="./images/Header_Cart.png" alt="Header Cart" title="Add to Cart">
+            <a href="/login"><img class="activateRegister" src="./images/Header_User.png" alt="Header User" title="Already Active"></a>
+        </div>
+
+    </header>
+    <!-- Header section ends here -->
+
+    <!-- Register section starts here -->
+
+    <section class="register" id="register">
+
+        <div class="register-container">
+
+            <form class="register-contents"	th:action="@{/process_register}" method="post" th:object="${registerRequest}">
+
+                <h2 class="register-title">Sign Up</h2>
+
+                <div class="register-content">
+
+                    <i class="fas fa-phone"></i>
+                    <input  th:field="*{mobile}" type="tel" id="mobile" autocomplete="off" name="mobile" placeholder="Mobile Number" required/>
+
+                </div>
+
+                <div class="register-content">
+
+                    <i class="fas fa-envelope"></i>
+                    <input th:field="*{email}" type="email" id="email" autocomplete="off" name="email" placeholder="Email" required/>
+
+                </div>
+
+                <div class="register-content">
+
+                    <i class="fas fa-lock"></i>
+                    <input th:field="*{password}" type="text" id="password" autocomplete="off" name="password" placeholder="Password" required/>
+
+                </div>
+
+                <p class="terms">By creating an account, you agree to Shopie's <span> Conditions of Use </span> and
+                    <span> Privacy Notice. </span>
+                </p>
+
+                <button type="submit" class="register-btn">Create</button>
+
+                <p class="login-register">Already have an account ? <a href="/login">Sign In</a></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- Register section ends here -->
+
+</body>
+
+<!-- Javascript connection link  -->
+<script src="./script.js"></script>
+
+</html>

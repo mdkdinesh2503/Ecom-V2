@@ -1,0 +1,458 @@
+/*--------------------------------------------------------------------
+                    OVERALL STYLE SECTION STARTS HERE
+--------------------------------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+	--main-color: #37d0ee;
+	--black: #000;
+	--white: #fff;
+	--red: #ff1200;
+	--green: #158871;
+	--light-color: #666;
+	--border: 0.1rem solid var(--light-color);
+	--red-border: 0.1rem solid var(--red);
+	--main-border: 0.1rem solid var(--main-color);
+	--white-border: 0.1rem solid var(--white);
+	--i-border: 0.1rem solid transparent;
+	--box-shadow: 0 2px 20px 2px rgba(0, 0, 0, 0.1);
+	--main-box-shadow: 0px 2px 20px 2px var(--main-color);
+	--text-shadow: 0.1rem 0.1rem 0.1rem var(--main-color);
+	--overlay-bg: linear-gradient(#171717b9 0%, #171717b9 100%);
+}
+
+* {
+	font-family: "Nunito", sans-serif;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: none;
+	text-decoration: none;
+}
+
+*::selection {
+	background-color: var(--main-color);
+	color: var(--white);
+}
+
+::-webkit-scrollbar {
+	width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--main-color);
+}
+
+html {
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+/* overall style section ends here */
+
+/*--------------------------------------------------------------------
+                      HEADER SECTION STARTS HERE
+--------------------------------------------------------------------*/
+
+header {
+	padding: 1rem 9%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: 0.6s;
+	box-shadow: var(--box-shadow);
+	background-color: var(--white);
+}
+
+header .header-logo {
+	transition: 0.6s;
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+header .header-name {
+	font-size: 1.2rem;
+	letter-spacing: 0.2rem;
+	margin-left: 0.5rem;
+	color: var(--black);
+}
+
+header .header-logo img {
+	height: 2rem;
+	width: 2rem;
+}
+
+header .nav-bar a {
+	font-size: 1rem;
+	color: var(--black);
+	font-weight: 400;
+	padding: 6px 15px;
+	letter-spacing: 0.1rem;
+	cursor: pointer;
+	border-radius: 0.5rem;
+	margin-left: 1rem;
+	border: var(--i-border);
+}
+
+#menu-btn:hover,
+header .nav-bar a:hover {
+	background: var(--main-color);
+	border: var(--i-border);
+	box-shadow: var(--box-shadow);
+}
+
+.activated {
+	background: var(--main-color);
+	box-shadow: var(--box-shadow);
+}
+
+#menu-btn {
+	font-size: 1.5rem;
+	border-radius: 0.5rem;
+	color: var(--black);
+	border: var(--border);
+	padding: 0.5rem 0.5rem;
+	cursor: pointer;
+	display: none;
+}
+
+.icon-container {
+	display: inline-flex;
+}
+
+.icon-container div span {
+	position: absolute;
+	font-size: 1.3rem;
+	margin-top: -0.001rem;
+	cursor: pointer;
+}
+
+.icon-container img {
+	height: 2rem;
+	width: 2rem;
+	margin-left: 1rem;
+	cursor: pointer;
+	border: var(--i-border);
+	border-radius: 5rem;
+	padding: 0.3rem;
+}
+
+.icon-container .activateLogin,
+.icon-container .activateRegister {
+	border-radius: 5rem;
+	border: var(--border);
+	cursor: no-drop;
+}
+
+.icon-container img:hover {
+	border: var(--border);
+}
+
+/* @media (max-width: 1250px) {
+    header {
+      padding: 1.3rem 5%;
+    }
+  
+    header .nav-bar a {
+      font-size: 1.18rem;
+      margin-left: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 1070px) {
+    header .nav-bar {
+      position: fixed;
+      top: 8rem;
+      right: 1rem;
+      border: var(--white-border);
+      background-color: var(--white);
+      border-radius: 1rem;
+      width: 23rem;
+      transform: scale(0);
+      opacity: 0;
+      transform-origin: top right;
+      transition: none;
+      text-align: center;
+    }
+  
+    #menu-btn {
+      display: inline-block;
+    }
+  
+    header {
+      background-position: center;
+      justify-content: space-around;
+      padding: 1.3rem 1%;
+    }
+  
+    header .nav-bar.active {
+      transform: scale(1);
+      opacity: 1;
+      transition: 0.2s ease-out;
+    }
+  
+    header .nav-bar a {
+      font-size: 1.2rem;
+      display: block;
+      margin: 1.7rem;
+      padding: 6px 10px;
+      outline: none;
+      color: var(--green);
+    }
+  
+    header .nav-bar a:hover {
+      background: var(--green);
+      color: var(--white);
+      transition: 0.3s ease-out;
+      transition-delay: 0.1s;
+    }
+  
+    header .nav-bar a:last-child {
+      background: var(--green);
+      color: var(--white);
+      border: var(--border);
+      transition: 0.3s ease-out;
+      transition-delay: 0.1s;
+    }
+  
+    header .nav-bar a:last-child:hover {
+      background: var(--white);
+      color: var(--green);
+      transition: 0.3s ease-out;
+      transition-delay: 0.1s;
+    }
+  } */
+
+/* Header section ends here */
+
+/*--------------------------------------------------------------------
+                      HOME SECTION STARTS HERE
+--------------------------------------------------------------------*/
+
+.home {
+	margin: 0 5%;
+}
+
+.home .home-features {
+	margin: 2rem 8rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-top: 6rem;
+	gap: 1rem;
+}
+
+.home .features-content {
+	align-items: center;
+}
+
+.home .features-content img {
+	height: 4.5rem;
+	width: 4.5rem;
+}
+
+.home .home-banner {
+	height: 30rem;
+	width: 100%;
+}
+
+.home .home-banner img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+/*--------------------------------------------------------------------
+                LOGIN & REGISTER SECTION STARTS HERE
+--------------------------------------------------------------------*/
+
+.login .login-container,
+.register .register-container {
+	display: grid;
+	place-content: center;
+	min-height: 100vh;
+}
+
+.login-contents,
+.register-contents {
+	border-radius: 1rem;
+	box-shadow: var(--main-box-shadow);
+	padding: 1rem;
+	width: 22rem;
+	border: var(--border);
+}
+
+.login-contents .close:hover,
+.register-contents .close:hover {
+	border: var(--white-border);
+	background: transparent;
+	color: var(--white);
+}
+
+.login-contents .login-title,
+.register-contents .register-title {
+	text-align: center;
+	color: var(--black);
+	font-weight: 600;
+	font-size: 2rem;
+	letter-spacing: 0.1rem;
+}
+
+.login-contents .login-content,
+.register-contents .register-content {
+	position: relative;
+	display: grid;
+	grid-template-columns: 10% 90%;
+	padding-top: 1rem;
+	border-bottom: var(--border);
+}
+
+.login-contents .login-content i,
+.register-contents .register-content i {
+	color: var(--black);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
+}
+
+.login-contents .login-content input::placeholder,
+.register-contents .register-content input::placeholder {
+	position: absolute;
+	top: 55%;
+	transform: translateY(-50%);
+	color: var(--black);
+	transition: 0.3s;
+}
+
+.login-contents .login-content input,
+.register-contents .register-content input {
+	top: 0;
+	width: 90%;
+	padding-top: 0.1rem;
+	margin: 0.5rem 0.7rem;
+	font-size: 1.3rem;
+	font-weight: lighter;
+	color: var(--black);
+}
+
+.login-contents .login-buttons,
+.register-contents .register-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0 0.5rem;
+}
+
+.login-contents .login-password-1,
+.register-contents .register-password-1 {
+	position: relative;
+	margin-top: 1rem;
+	display: flex;
+	align-items: center;
+}
+
+.login-contents .login-password-1 input,
+.register-contents .register-password-1 input {
+	width: 1.2rem;
+	height: 1.2rem;
+	cursor: pointer;
+}
+
+.login-contents .login-password-1:hover p,
+.register-contents .register-password-1:hover p {
+	text-shadow: var(--text-shadow);
+}
+
+.login-contents .login-password-1 p,
+.register-contents .register-password-1 p {
+	color: var(--black);
+	margin-left: 0.3rem;
+	font-size: 0.9rem;
+	cursor: no-drop;
+}
+
+.login-contents .login-password-2,
+.register-contents .register-password-2 {
+	position: relative;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--black);
+	font-size: 0.9rem;
+	margin-top: 1rem;
+	cursor: pointer;
+}
+
+.login-contents .login-password-2:hover,
+.register-contents .register-password-2:hover {
+	text-shadow: var(--text-shadow);
+}
+
+.login-contents .login-btn,
+.register-contents .register-btn {
+	background-color: var(--main-color);
+	color: var(--black);
+	padding: 0.2rem;
+	font-size: 1.4rem;
+	width: 100%;
+	text-align: center;
+	letter-spacing: 0.1rem;
+	font-weight: bold;
+	border-radius: 0.3rem;
+	box-shadow: var(--main-box-shadow);
+	cursor: pointer;
+}
+
+.login-contents .login-btn:hover,
+.register-contents .register-btn:hover {
+	background: var(--white);
+	color: var(--black);
+	text-shadow: var(--text-shadow);
+}
+
+.login-contents .login-register,
+.register-contents .login-register {
+	font-size: 1rem;
+	margin-top: 1.5rem;
+	color: var(--black);
+	text-decoration: none;
+}
+
+.login-contents .login-register a,
+.register-contents .login-register a {
+	color: var(--black);
+	text-shadow: var(--text-shadow);
+	letter-spacing: 0.1rem;
+	cursor: pointer;
+}
+
+.login-contents .login-register a:hover,
+.register-contents .login-register a:hover {
+	text-decoration: underline;
+}
+
+.login-contents .terms,
+.register-contents .terms {
+	font-size: 0.65rem;
+	margin: 1rem 0 1.2rem;
+}
+
+.login-contents .terms span,
+.register-contents .terms span {
+	color: var(--main-color);
+}
+
+/* Login & Register section ends here */
