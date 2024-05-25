@@ -1,0 +1,315 @@
+/* ------------------------------------------------------ADMIN CONTAINER STYLE STARTS HERE------------------------------------------------------ */
+
+/*-------------------------------------------------------------
+----------------- Overall Styling starts here------------------
+---------------------------------------------------------------  */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --main-color: #1198db;
+  --light-main: #9ddaf6;
+  --black: #000;
+  --white: #fff;
+  --red: #ff1200;
+  --green: #158871;
+  --light-color: #666;
+  --border: 0.1rem solid var(--light-color);
+  --red-border: 0.1rem solid var(--red);
+  --main-border: 0.1rem solid var(--main-color);
+  --white-border: 0.1rem solid var(--white);
+  --i-border: 0.1rem solid transparent;
+  --box-shadow: 0 2px 20px 2px rgba(0, 0, 0, 0.1);
+  --main-box-shadow: 0px 2px 20px 2px var(--main-color);
+  --text-shadow: 0.1rem 0.1rem 0.1rem var(--main-color);
+  --overlay-bg: linear-gradient(#171717b9 0%, #171717b9 100%);
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+*::selection {
+  background-color: var(--main-color);
+  color: var(--white);
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+#sidebar::-webkit-scrollbar {
+  visibility: hidden;
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Overall styling ends here  */
+
+/*-------------------------------------------------------------
+----------------- navigation section starts here---------------
+---------------------------------------------------------------  */
+
+.navigation {
+  height: 100%;
+  width: 3rem;
+  position: relative;
+}
+
+.navigation .menu-btn {
+  position: fixed;
+  left: 1.8rem;
+  top: 1rem;
+  background: var(--main-color);
+  color: var(--white);
+  height: 2.8rem;
+  width: 2.8rem;
+  z-index: 10000;
+  border: var(--main-border);
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+#btn:checked ~ .menu-btn {
+  left: 255px;
+}
+
+.navigation .menu-btn i {
+  position: absolute;
+  font-size: 1.6rem;
+}
+
+.navigation .menu-btn:hover {
+    background-color: var(--white);
+    color: var(--main-color);
+  }
+
+.navigation .menu-btn i.fa-times {
+  opacity: 0;
+}
+
+#btn:checked ~ .menu-btn i.fa-times {
+  opacity: 1;
+  transform: rotate(-180deg);
+}
+
+#btn:checked ~ .menu-btn i.fa-bars {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+#sidebar {
+  position: fixed;
+  border: var(--main-border);
+  background-color: var(--light-main);
+  height: 100%;
+  width: 255px;
+  overflow-y: scroll;
+  left: -270px;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+#btn:checked ~ #sidebar {
+  left: 0;
+}
+
+#sidebar .title {
+  display: inline-flex;
+  width: 100%;
+  padding: 1rem 3rem;
+  background: var(--light-main);
+  border-bottom: var(--main-border);
+  color: var(--black);
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding-left:3.2rem;
+}
+
+#sidebar .title img {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: .3rem;
+}
+
+#sidebar .title p {
+    margin-top: .5rem;
+}
+
+#sidebar .list-items {
+  position: relative;
+  width: 100%;
+  height: 92%;
+  list-style: none;
+}
+
+#sidebar .list-items li {
+  padding-left: 30px;
+  line-height: 50px;
+  border-top: var(--main-border);
+  border-bottom: var(--main-border);
+  transition: all 0.3s ease;
+}
+
+#sidebar .list-items li:hover {
+  border-top: var(--i-border);
+  border-bottom: var(--i-border);
+  background-color: var(--main-color);
+  box-shadow: 0 0px 10px 3px var(--main-color);
+}
+
+#sidebar .list-items li a {
+  color: var(--black);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+#sidebar .list-items li a i {
+  margin-right: 15px;
+  color: var(--black);
+  font-size: 1.2rem;
+}
+
+/* navigation section ends here  */
+
+/*-------------------------------------------------------------
+--------------- Overall common Section starts here-------------
+---------------------------------------------------------------  */
+
+header {
+  height: 2.7rem;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #efefef;
+  border: 1px solid var(--main-color);
+  box-shadow: 0.5rem 0.5rem 0 var(--light-blue);
+  padding: 1rem 8rem;
+  z-index: 5000;
+}
+
+.main-content {
+  padding: 0;
+  overflow: hidden;
+}
+
+.main-content header .menu-toggle h1 {
+  margin-left: -2rem;
+  font-weight: bolder;
+  font-size: 2.3rem;
+  color: var(--main-color);
+}
+
+ .main-content header .icon{
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 14rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.main {
+  padding: 1.2rem;
+  background: var(--light-main);
+  min-height: 89.2vh;
+  margin-top: 4.8rem;
+}
+
+.page-header {
+  display: flex;
+  height: 50px;
+  border-bottom: var(--main-border);
+  justify-content: space-between;
+}
+
+.UserDesign {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: var(--main-color);
+  background-color: #fff;
+  padding: 6px;
+  margin-left: 1rem;
+  font-weight: 700;
+  border: var(--main-border);
+}
+
+.header-actions .emoji {
+  outline: none;
+  text-decoration: none;
+  color: var(--white);
+  background: var(--main-color);
+  border: var(--main-border);
+  padding: 0.5rem 0.9rem;
+  border-radius: 3px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-right: 5.8rem;
+}
+
+.header-actions a:hover {
+  background: var(--white);
+  color: var(--main-color);
+  box-shadow: var(--box-shadow);
+}
+
+.buttons {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.btn {
+  color: var(--white);
+  background: var(--main-color);
+  box-shadow: var(--box-shadow);
+  font-size: 1.2rem;
+  padding: 0.2rem 1rem;
+  font-weight: 500;
+  margin: 2rem;
+  justify-content: space-between;
+  text-decoration: none;
+  border: var(--border);
+  cursor: pointer;
+}
+
+.btn i {
+  font-size: 1rem;
+  padding: 0.2rem;
+}
+
+.btn:hover {
+  background: var(--white);
+  color: var(--main-color);
+}
+
+/* Overall common Section ends here */

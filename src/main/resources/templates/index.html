@@ -4,102 +4,339 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Title name  -->
-    <title> Shopie. </title>
+	<!-- Title name  -->
+	<title> S h o p i e . </title>
 
-    <!-- Title logo link  -->
-    <link rel="icon" type="image/x-icon" href="./images/Head_logo.png">
+	<!-- Title logo link  -->
+	<link rel="icon" type="image/x-icon" href="./images/Title_Image.png">
 
-    <!-- Font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<!-- Font awesome cdn link  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <!-- Font style poppins link -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+	<!-- Font style poppins link -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700&effect=fire|neon|outline|emboss|shadow-multiple|Audiowide|Sofia|Trirong"
+		rel="stylesheet">
 
-    <!-- Font style connection link -->
-	<link rel="stylesheet" th:href="@{./style.css}">
+	<!-- Font style connection link -->
+	<link rel="stylesheet" th:href="@{/css/style.css}">
 
 </head>
 
 <body>
 
-    <!-- Header section starts here -->
-    <header>
+	<!-- Header section starts here -->
+	<header>
 
-        <a class="header-logo" href="/"> <img src="./images/Header_logo.png" alt="Header Logo"
-                title="Shop">
-            <p class="header-name">Shopie.</p>
-        </a>
+		<a class="header-logo" href="/" title="S h o p i e ."> <img src="./images/Title_Image.png" alt="Header Logo">
+			<p class="header-name">Shopie.</p>
+		</a>
 
-        <nav class="nav-bar">
-            <a href="/" class="activated"><i class="fas fa-home"></i> Home</a>
-            <a href="/product"><i class="fas fa-shopping-bag"></i> Products</a>
-            <a href="/contact"><i class="fas fa-address-book"></i> Contact</a>
-        </nav>
+		<nav class="nav-bar">
+			<a href="/" class="activated"><i class="fas fa-home activated"></i> Home</a>
+			<a href="/product"><i class="fas fa-shopping-bag"></i> Products</a>
+			<a href="/contact"><i class="fas fa-address-book"></i> Contact</a>
+		</nav>
 
-        <div class="icon-container">
-            <div id="menu-btn" class="fas fa-bars"></div>
-            <img id="search-btn" src="./images/Header_Search.png" alt="Header Search" title="Search">
-            <img id="cart-btn" src="./images/Header_Cart.png" alt="Header Cart" title="Add to Cart">
-			<a href="/login"><img src="./images/Header_User.png" alt="Header User" title="Sign-in/Sign-up"></a>
-        </div>
+		<div class="icon-container">
+			<div id="menu-btn" class="fas fa-bars"></div>
+			<img id="search-btn" src="./images/Home/Header/Search.png" alt="Search" title="Search">
+			<img id="cart-btn" src="./images/Home/Header/Cart.png" alt="Cart" title="Add to Cart">
+			<a href="/login"><img src="./images/Home/Header/User.png" alt="User" title="Sign-in/Sign-up"></a>
+		</div>
 
-    </header>
-    <!-- Header section ends here -->
+	</header>
+	<!-- Header section ends here -->
 
-    <!-- Home section starts here -->
-    <section class="home">
+	<!-- Home section starts here -->
+	<section class="home">
 
-        <div class="home-features">
-            <div class="features-content">
-                <img src="./images/Home_Grocery.png" alt="">
-                <p>Grocery</p>
-            </div>
+		<div class="home-features">
+			<div class="features-content">
+				<img src="./images/Home/Categories/Grocery.png">
+				<p>Grocery</p>
+			</div>
 
-            <div class="features-content">
-                <img src="./images/Home_Mobiles.png" alt="">
-                <p>Mobiles</p>
-            </div>
+			<div class="features-content">
+				<img src="./images/Home/Categories/Mobiles.png">
+				<p>Mobiles</p>
+			</div>
 
-            <div class="features-content">
-                <img src="./images/Home_Fasion.png" alt="">
-                <p>Fashion</p>
-            </div>
+			<div class="features-content">
+				<img src="./images/Home/Categories/Fasion.png">
+				<p>Fashion</p>
+			</div>
 
-            <div class="features-content">
-                <img src="./images/Home_Electronics.png" alt="">
-                <p>Electronics</p>
-            </div>
+			<div class="features-content">
+				<img src="./images/Home/Categories/Electronics.png">
+				<p>Electronics</p>
+			</div>
 
-            <div class="features-content">
-                <img src="./images/Home_Furnitures.jpg" alt="">
-                <p>Furnitures</p>
-            </div>
+			<div class="features-content">
+				<img src="./images/Home/Categories/Furnitures.jpg">
+				<p>Furnitures</p>
+			</div>
 
-            <div class="features-content">
-                <img src="./images/Home_Appliances.jpg" alt="">
-                <p>Appliances</p>
-            </div>
+			<div class="features-content">
+				<img src="./images/Home/Categories/Appliances.jpg">
+				<p>Appliances</p>
+			</div>
 
-            <div class="features-content">
-                <img src="./images/Home_Toys.png" alt="">
-                <p>Toys</p>
-            </div>
-        </div>
+			<div class="features-content">
+				<img src="./images/Home/Categories/Travel.png">
+				<p>Travel</p>
+			</div>
 
-        <div class="home-banner">
-            <img src="./images/Home_Main_Image.jpg" alt="">
-        </div>
+			<div class="features-content">
+				<img src="./images/Home/Categories/Toys.png">
+				<p>Toys</p>
+			</div>
 
-    </section>
-    <!-- Home section ends here -->
+		</div>
+
+		<div class="home-banner">
+			<img src="./images/Home/Home_Banner.jpg" alt="Ultimate Discount Sale Up to 50%">
+		</div>
+
+		<div class="home-service">
+			<img src="./images/Home/Home_Services.png" alt="Customer Services">
+		</div>
+
+		<div class="new-arrivals">
+			<div class="new-arrivals-1">
+				<div class="new-arrivals-image">
+					<img src="./images/Home/Arrivals/Arrivals-1.jpg" alt="Streetwear Collection SS-20">
+				</div>
+				<div class="new-arrivals-content">
+					<h1>New Arrivals</h1>
+					<h3>Streetwear</h3>
+					<h3>Collection SS-20</h3>
+					<button>Explore This Collection <i class="fas fa-long-arrow-alt-right"></i></button>
+				</div>
+			</div>
+			<div class="new-arrivals-2">
+				<div class="new-arrivals-contents">
+					<div class="new-arrivals-image">
+						<img src="./images/Home/Arrivals/Arrivals-2.jpg" alt="Cadigans & Sweaters">
+					</div>
+					<div class="new-arrivals-content">
+						<h3>Cadigans &</h3>
+						<h3>Sweaters</h3>
+						<button>Explore Now <i class="fas fa-long-arrow-alt-right"></i></button>
+					</div>
+				</div>
+				<div class="new-arrivals-contents">
+					<div class="new-arrivals-image">
+						<img src="./images/Home/Arrivals/Arrivals-3.jpg" alt="Hoodies & Sweatshirts">
+					</div>
+					<div class="new-arrivals-content">
+						<h3>Hoodies &</h3>
+						<h3>Sweatshirts</h3>
+						<button>Explore Now <i class="fas fa-long-arrow-alt-right"></i></button>
+					</div>
+				</div>
+				<div class="new-arrivals-contents">
+					<div class="new-arrivals-image">
+						<img src="./images/Home/Arrivals/Arrivals-4.jpg" alt="Hand Bag & Backpack">
+					</div>
+					<div class="new-arrivals-content">
+						<h3>Hand Bag</h3>
+						<h3>& Backpack</h3>
+						<button>Explore Now <i class="fas fa-long-arrow-alt-right"></i></button>
+					</div>
+				</div>
+				<div class="new-arrivals-contents">
+					<div class="new-arrivals-image">
+						<img src="./images/Home/Arrivals/Arrivals-5.jpg" alt="">
+					</div>
+					<div class="new-arrivals-content">
+						<h3>Hat &</h3>
+						<h3>Sunglasses</h3>
+						<button>Explore Now <i class="fas fa-long-arrow-alt-right"></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="products">
+			<div class="products-1">
+				<h1>Recommended to you</h1>
+				<div class="product-img">
+					<img src="./images/Home/Home_Recom_1.png" alt="Kitchen Utensils">
+				</div>
+				<div class="products-content">
+					<div class="product">
+						<h2>-22%</h2>
+						<img src="./images/Products/Prod-1.jpg" alt="Bluetooth Headphones" />
+						<h3>Bluetooth Headphones With 30 mm Drivers, AUX...</h3>
+						<div class="star">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+						<div class="amount">
+							<h4>$120.00</h4>
+							<h5>$250.00</h5>
+						</div>
+					</div>
+					<div class="product">
+						<h2>-49%</h2>
+						<img src="./images/Products/Prod-2.jpg" alt="Smart Watch" />
+						<h3>Willful Smart Watch for Android Phones Compatible...</h3>
+						<div class="star">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+						<div class="amount">
+							<h4>$240.00</h4>
+							<h5>$450.00</h5>
+						</div>
+					</div>
+					<div class="product">
+						<img src="./images/Products/Prod-3.jpg" alt="Hoodies" />
+						<h3>Nike Goku And Luffy Pullover Hoodie – The Geek Gifts</h3>
+						<div class="star">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+						<div class="amount">
+							<h4>$59.00</h4>
+						</div>
+					</div>
+					<div class="product">
+						<h2>-13%</h2>
+						<img src="./images/Products/Prod-4.jpg" alt="Backpack" />
+						<h3>Epoch Nylon 55 litres Waterproof Strolley Duffle...</h3>
+						<div class="star">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+						<div class="amount">
+							<h4>$199.00</h4>
+							<h5>$299.00</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="products-2">
+				<img src="./images/Home/Home_Recom_2.png" alt="Fashion Trends">
+			</div>
+		</div>
+
+		<h1 class="heading"> <span> Special </span> Offers </h1>
+
+		<div class="offers">
+
+			<div class="offer-contents">
+				<div class="offer-content">
+					<img src="./images/Home/Offers/Offers-1.jpg" alt="Weekly Flash Deals">
+					<div class="offer-data">
+						<p>Weekly</p>
+						<p>Flash Deals</p>
+						<h1>Up to 30% off</h1>
+						<button>View Deals <i class="fas fa-long-arrow-alt-right"></i></button>
+					</div>
+				</div>
+
+				<div class="offer-content">
+					<img src="./images/Home/Offers/Offers-2.jpg" alt="Summer Escapes">
+					<div class="offer-data">
+						<p>Summer</p>
+						<p>Escapes</p>
+						<h1>Time to Shop</h1>
+						<button>Learn More <i class="fas fa-long-arrow-alt-right"></i></button>
+					</div>
+				</div>
+
+
+				<div class="offer-content">
+					<img src="./images/Home/Offers/Offers-3.jpg" alt="Exclusive Deals">
+					<div class="offer-data">
+						<p>Exclusive</p>
+						<p>Deals</p>
+						<h1>Want to save up to 50%</h1>
+						<button>Subscribe Us <i class="fas fa-long-arrow-alt-right"></i></button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+	<!-- Home section ends here -->
+
+	<!-- footer section starts here -->
+	<footer>
+
+		<div class="box-container">
+
+			<div class="box">
+				<a class="footer-logo" href="/" title="S h o p i e ."> <img src="./images/Title_Image.png"
+						alt="footer Logo">
+					<p class="footer-name">Shopie.</p>
+				</a>
+				<div class="divder">
+					<a>Address : </a>
+					<p>2593 Timbercrest Road, Chisana, <br> Alaska Badalas United State</p>
+					<a>Phone : </a>
+					<p>706-676-8237</p>
+					<a>Email : </a>
+					<p>demo@shopie.com</p>
+				</div>
+			</div>
+
+			<div class="box">
+				<h3>quick links</h3>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Special Offers </a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Gift Cards </a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Orders </a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Cart Details</a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Track your Order </a>
+			</div>
+
+			<div class="box">
+				<h3>Connect</h3>
+				<a class="sec secf"><i class="fab fa-facebook-f"></i> facebook </a>
+				<a class="sec seci"><i class="fab fa-instagram"></i> instagram </a>
+				<a class="sec secw"><i class="fab fa-whatsapp"></i> WhatsApp </a>
+				<a class="sec sect"><i class="fab fa-twitter"></i> Twitter </a>
+			</div>
+
+			<div class="box">
+				<h3>Customer Service</h3>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Privacy Policy</a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Terms & Conditions</a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Location & Working Hours</a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Our Guarantee</a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Contact</a>
+
+			</div>
+
+		</div>
+
+		<div class="credit">----- © Copyright 2024 <span>Shopie.</span> - All Rights Reserved - Design Belongs to <span>
+				Dinesh Kumar M</span>. -----</div>
+
+	</footer>
+	<!-- footer section ends here -->
 
 </body>
 
 <!-- Javascript connection link  -->
-<script src="./script.js"></script>
+<script type="text/javascript" th:src="@{/js/script.js}"></script>
 
 </html>

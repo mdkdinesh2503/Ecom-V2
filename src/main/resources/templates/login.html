@@ -4,104 +4,133 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Title name  -->
-    <title> Shopie.Login </title>
+	<!-- Title name  -->
+	<title> L G | S h o p i e . </title>
 
-    <!-- Title logo link  -->
-    <link rel="icon" type="image/x-icon" href="./images/Head_logo.png">
+	<!-- Title logo link  -->
+	<link rel="icon" type="image/x-icon" href="./images/Title_Image.png">
 
-    <!-- Font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<!-- Font awesome cdn link  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <!-- Font style poppins link -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+	<!-- Font style poppins link -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 
-    <!-- Font style connection link -->
-    <link rel="stylesheet" th:href="@{./style.css}">
+	<!-- Font style connection link -->
+	<link rel="stylesheet" th:href="@{/css/style.css}">
 
 </head>
 
 <body>
 
-    <!-- Header section starts here -->
-    <header>
+	<!-- Header section starts here -->
+	<header>
 
-        <a class="header-logo" href="/"> <img src="./images/Header_logo.png" alt="Header Logo" title="Shop">
-            <p class="header-name">Shopie.</p>
-        </a>
+		<a class="header-logo" href="/" title="S h o p i e ."> <img src="./images/Title_Image.png" alt="Header Logo">
+			<p class="header-name">Shopie.</p>
+		</a>
 
-        <nav class="nav-bar">
-            <a href="/"><i class="fas fa-home"></i> Home</a>
-            <a href="/product"><i class="fas fa-shopping-bag"></i> Products</a>
-            <a href="/contact"><i class="fas fa-address-book"></i> Contact</a>
-        </nav>
+		<nav class="nav-bar">
+			<a href="/"><i class="fas fa-home"></i> Home</a>
+			<a href="/product"><i class="fas fa-shopping-bag"></i> Products</a>
+			<a href="/contact"><i class="fas fa-address-book"></i> Contact</a>
+		</nav>
 
-        <div class="icon-container">
-            <div id="menu-btn" class="fas fa-bars"></div>
-            <img id="search-btn" src="./images/Header_Search.png" alt="Header Search" title="Search">
-            <img id="cart-btn" src="./images/Header_Cart.png" alt="Header Cart" title="Add to Cart">
-            <a href="/login"><img class="activateLogin" src="./images/Header_User.png" alt="Header User" title="Already Active"></a>
-        </div>
+		<div class="icon-container">
+			<div id="menu-btn" class="fas fa-bars"></div>
+			<img id="search-btn" src="./images/Home/Header/Search.png" alt="Header Search" title="Search">
+			<img id="cart-btn" src="./images/Home/Header/Cart.png" alt="Header Cart" title="Add to Cart">
+			<a href="/login"><img src="./images/Home/Header/User.png" class="activateLogin" alt="Header User"
+					title="Sign-in/Sign-up"></a>
+		</div>
 
-    </header>
-    <!-- Header section ends here -->
+	</header>
+	<!-- Header section ends here -->
 
-    <!-- Login section starts here -->
+	<!-- Login section starts here -->
+	<section class="login" id="loginBlur">
 
-    <section class="login" id="login">
+		<div class="login-container">
 
-        <div class="login-container">
+			<form class="login-contents" th:action="@{/process_login}" method="post" th:object="${loginRequest}">
 
-            <form class="login-contents" th:action="@{/process_login}" method="post" th:object="${loginRequest}">
+				<h2 class="login-title">Sign In</h2>
 
-                <h2 class="login-title">Sign In</h2>
+				<div class="login-content">
 
-                <div class="login-content">
+					<i class="fas fa-user"></i>
+					<input th:field="*{username}" type="text" id="username" autocomplete="off" name="username"
+						placeholder="Email / Mobile Number" required />
 
-                    <i class="fas fa-user"></i>
-                    <input type="email" th:field="*{email}" autocomplete="off" id="email" name="email" placeholder="Email / Mobile Number" required/>
+				</div>
 
-                </div>
+				<div class="login-content">
 
-                <div class="login-content">
+					<i class="fas fa-lock"></i>
+					<input th:field="*{password}" type="password" id="password" autocomplete="off" name="password"
+						placeholder="Password" required />
 
-                    <i class="fas fa-lock"></i>
-                    <input th:field="*{password}" type="password" id="password" name="password" autocomplete="off" placeholder="Password" required/>
+				</div>
 
-                </div>
+				<div class="login-buttons">
 
-                <div class="login-buttons">
+					<div class="login-password-1">
+						<input type="checkbox" id="myCheck" onclick="showPassword()">
+						<label for="myCheck">Show Password</label>
+					</div>
 
-                    <div class="login-password-1">
-                        <input type="checkbox">
-                        <p>Show Password</p>
-                    </div>
+					<a class="login-password-2">Forgot Password?</a>
 
-                    <a class="login-password-2">Forgot Password?</a>
+				</div>
 
-                </div>
+				<p class="terms">By continuing, you agree to Shopie's <span> Conditions of Use </span> and <span>
+						Privacy Notice. </span></p>
 
-                <p class="terms">By continuing, you agree to Shopie's <span> Conditions of Use </span> and <span>
-                        Privacy Notice. </span></p>
+				<button type="submit" class="login-btn">Continue</button>
 
-                <button type="submit" class="login-btn">Continue</button>
+				<p class="login-register">Don't have an account ? <a href="/register">SignUp</a></p>
 
-                <p class="login-register">Don't have an account ? <a href="/register">SignUp</a></p>
+			</form>
 
-            </form>
+		</div>
 
-        </div>
+	</section>
+	<!-- Login section ends here -->
 
-    </section>
+	<!-- Successfully user login popup starts here  -->
 
-    <!-- Login section ends here -->
+	<div id="user-popup" class="user-popup">
+
+		<img src="./images/tick.png" alt="">
+
+		<h1>User Login Successfull!</h1>
+
+		<p>We are Redirecting to Website. Do not refresh the page!!</p><br>
+
+	</div>
+
+	<!-- Successfully user login popup ends here  -->
+
+	<!-- Successfully admin login popup starts here  -->
+
+	<div id="admin-popup" class="admin-popup">
+
+		<img src="./images/tick.png" alt="">
+
+		<h1>Admin Login Successfull!</h1>
+
+		<p>We are Redirecting to Website. Do not refresh the page!!</p><br>
+
+	</div>
+
+	<!-- Successfully admin login popup ends here  -->
 
 </body>
 
 <!-- Javascript connection link  -->
-<script src="./script.js"></script>
+<script type="text/javascript" th:src="@{/js/script.js}"></script>
 
 </html>

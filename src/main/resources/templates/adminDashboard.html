@@ -1,0 +1,193 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title name  -->
+	<title> Shopie.Admin </title>
+
+	<!-- Title logo link  -->
+	<link rel="icon" type="image/x-icon" href="./images/Head_logo.png">
+
+	<!-- Font awesome cdn link  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+	<!-- Font style poppins link -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+
+	<!-- Font style connection link -->
+	<link rel="stylesheet" th:href="@{/css/styleAdmin.css}">
+
+</head>
+
+<body>
+
+	<body>
+
+		<!-- navigation section starts here  -->
+
+		<div class="navigation">
+
+			<input type="checkbox" id="btn" hidden>
+
+			<label for="btn" class="menu-btn">
+				<i class="fas fa-bars"></i>
+				<i class="fas fa-times"></i>
+			</label>
+
+			<nav id="sidebar">
+
+				<div class="title"> <img src="./images/Header_logo.png" alt="Header Logo" title="Shop" />
+					<p> Shopie.</p>
+				</div>
+
+				<ul class="list-items">
+					<li><a ><i class="fas fa-home"></i>Dashboard</a></li>
+					<li><a ><i class="fas fa-book"></i>Register List</a></li>
+					<li><a ><i class="fas fa-users"></i>Student Details</a></li>
+					<li><a ><i class="fas fa-address-book"></i>Attendance</a></li>
+					<li><a ><i class="fas fa-calendar"></i>Time Table</a></li>
+					<li><a ><i class="fas fa-rupee-sign"></i>Fees Details</a></li>
+					<li><a ><i class="fas fa-file-alt"></i>Exam Details</a></li>
+					<li><a ><i class="fas fa-file-export"></i>Result Details</a></li>
+					<li><a ><i class="fas fa-edit"></i>Reports</a></li>
+				</ul>
+
+			</nav>
+
+		</div>
+
+		<!-- navigation section ends here  -->
+
+		<!-- Admin dashboard section starts here  -->
+
+		<div class="main-content">
+
+			<header>
+
+				<div class="menu-toggle">
+					<h1>Dashboard</h1>
+				</div>
+
+				<div class="icon">
+					<a title="logout"><span class="dismiss">Logout </span><span class="fas fa-file-export"></span></a>
+				</div>
+
+			</header>
+
+			<div class="main">
+
+				<div class="page-header">
+
+					<div>
+						<span class="UserDesign">Welcome Admin [[${adminEmail}]]</span>
+					</div>
+
+					<div class="header-actions">
+
+						<a class="emoji" href="./AdminReport.html">
+							<span class="fas fa-edit"></span>
+							Enquiry
+						</a>
+
+					</div>
+
+				</div>
+
+				<div class="cards">
+
+					<div class="card-single">
+
+						<div class="card-flex">
+
+							<div class="card-info">
+
+								<div class="card-head">
+									<span>Students</span>
+									<small>Number of Students</small>
+								</div>
+
+								<h2>175</h2>
+
+								<small class="act">Currently active</small>
+
+							</div>
+
+							<div class="card-chart">
+								<span class="fas fa-users"></span>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="card-single">
+
+						<div class="card-flex">
+
+							<div class="card-info">
+
+								<div class="card-head">
+									<span>Teachers</span>
+									<small>Number of Teachers</small>
+								</div>
+
+								<h2>60</h2>
+
+								<small class="act">Currently active</small>
+
+							</div>
+
+							<div class="card-chart">
+								<span class="fas fa-chalkboard-teacher"></span>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="card-single">
+
+						<div class="card-flex">
+
+							<div class="card-info">
+
+								<div class="card-head">
+
+									<span>Attendance</span>
+
+									<small>Number of Marked</small>
+
+								</div>
+
+								<h2>13</h2>
+
+								<small class="act">Currently active</small>
+
+							</div>
+
+							<div class="card-chart">
+								<span class="fas fa-address-book"></span>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- Admin dashboard section ends here  -->
+
+	</body>
+
+	<!-- Javascript connection link  -->
+
+</html>

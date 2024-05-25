@@ -7,11 +7,19 @@ import org.springframework.stereotype.Repository;
 
 import com.ecommerce.model.*;
 
+
+
+
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 	
 	Optional<User> findByEmailAndPassword(String email, String password);
 	
-	Optional<User> findByEmail(String email);	
+	Optional<User> findByMobileAndPassword(String mobile, String password);
+	
+	Optional<User> findByEmail(String email);
+	
+	Optional<User> findByMobile(String mobile);
+
 
 }

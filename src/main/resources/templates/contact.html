@@ -1,0 +1,172 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title name  -->
+	<title> C T | S h o p i e . </title>
+
+	<!-- Title logo link  -->
+	<link rel="icon" type="image/x-icon" href="./images/Title_Image.png">
+
+	<!-- Font awesome cdn link  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+	<!-- Font style poppins link -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700&effect=fire|neon|outline|emboss|shadow-multiple|Audiowide|Sofia|Trirong"
+		rel="stylesheet">
+
+	<!-- Font style connection link -->
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+
+	<!-- Header section starts here -->
+	<header>
+
+		<a class="header-logo" href="/" title="S h o p i e ."> <img src="./images/Title_Image.png" alt="Header Logo">
+			<p class="header-name">Shopie.</p>
+		</a>
+
+		<nav class="nav-bar">
+			<a href="/"><i class="fas fa-home"></i> Home</a>
+			<a href="/product"><i class="fas fa-shopping-bag"></i> Products</a>
+			<a href="/contact" class="activated"><i class="fas fa-address-book activated"></i> Contact</a>
+		</nav>
+
+		<div class="icon-container">
+			<div id="menu-btn" class="fas fa-bars"></div>
+			<img id="search-btn" src="./images/Home/Header/Search.png" alt="Header Search" title="Search">
+			<img id="cart-btn" src="./images/Home/Header/Cart.png" alt="Header Cart" title="Add to Cart">
+			<a href="/login"><img src="./images/Home/Header/User.png" alt="Header User" title="Sign-in/Sign-up"></a>
+		</div>
+
+	</header>
+	<!-- Header section ends here -->
+
+	<!-- Contact section starts here -->
+	<section class="contact">
+
+		<div class="icons-container">
+			<a>
+				<div class="icons">
+					<i class="fas fa-clock"></i>
+					<h3>opening hours :</h3>
+					<p>09:00am to 04:00pm</p>
+				</div>
+			</a>
+
+			<a href="#">
+				<div class="icons">
+					<i class="fas fa-phone"></i>
+					<h3>phone :</h3>
+					<p>706-676-8237</p>
+				</div>
+			</a>
+
+			<a href="#">
+				<div class="icons">
+					<i class="fas fa-envelope"></i>
+					<h3> email : </h3>
+					<p>demo@shopie.com</p>
+				</div>
+			</a>
+
+			<a href="#">
+				<div class="icons">
+					<i class="fas fa-map"></i>
+					<h3>address :</h3>
+					<p>2593 Timbercrest Road, Chisana, Alaska Badalas United State</p>
+				</div>
+			</a>
+
+		</div>
+
+		<div class="row">
+
+			<form>
+				<h3>Get In Touch</h3>
+				<input type="text" name="UserName :" placeholder="name" class="box">
+				<input type="email" name="Email :" placeholder="email" class="box">
+				<input type="tel" name="Phone Number :" maxlength="10" placeholder="phone" class="box">
+				<textarea name="Messgae Box :" class="box" placeholder="message" id="" cols="30" rows="10"></textarea>
+				<input type="submit" value="send message" class="btn">
+			</form>
+
+			<div class="image">
+				<img src="./images/Contact.gif" alt="">
+			</div>
+
+		</div>
+
+	</section>
+	<!-- Contact section ends here -->
+
+	<!-- footer section starts here-->
+	<footer>
+
+		<div class="box-container">
+
+			<div class="box">
+				<a class="footer-logo" href="/" title="S h o p i e ."> <img src="./images/Title_Image.png"
+						alt="footer Logo">
+					<p class="footer-name">Shopie.</p>
+				</a>
+				<div class="divder">
+					<a>Address : </a>
+					<p>2593 Timbercrest Road, Chisana, Alaska Badalas United State</p>
+					<a>Phone: </a>
+					<p>706-676-8237</p>
+					<a>Email : </a>
+					<p>demo@shopie.com</p>
+				</div>
+			</div>
+
+			<div class="box">
+				<h3>quick links</h3>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Special Offers </a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Gift Cards </a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Orders </a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Cart Details</a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Track your Order </a>
+			</div>
+
+			<div class="box">
+				<h3>Connect</h3>
+				<a class="sec secf"><i class="fab fa-facebook-f"></i> facebook </a>
+				<a class="sec seci"><i class="fab fa-instagram"></i> instagram </a>
+				<a class="sec secw"><i class="fab fa-whatsapp"></i> WhatsApp </a>
+				<a class="sec sect"><i class="fab fa-twitter"></i> Twitter </a>
+			</div>
+
+			<div class="box">
+				<h3>Customer Service</h3>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Privacy Policy</a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Terms & Conditions</a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Location & Working Hours</a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Our Guarantee</a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Contact</a>
+
+			</div>
+
+		</div>
+
+		<div class="credit">----- © Copyright 2024 <span>Shopie.</span> - All Rights Reserved - Design Belongs to <span>
+				Dinesh Kumar M</span>. -----</div>
+
+	</footer>
+	<!-- footer section ends here-->
+
+</body>
+
+<!-- Javascript connection link  -->
+<script type="text/javascript" th:src="@{/js/script.js}"></script>
+
+</html>

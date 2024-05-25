@@ -19,38 +19,58 @@ public class LoginController {
 		return "index";
 	}
 	
+	@GetMapping("/contact")
+	public String contactPage() {
+		return "contact";
+	}
+	
 	@GetMapping("/register")
 	public String getRegisterPage(Model model) {
 		model.addAttribute("registerRequest", new User());
 		return "register";
 	}
+	
+	@GetMapping("/user")
+	public String userDashboardPage(Model model) {
+		return "userDashboard";
+	}
+	
+	@GetMapping("/admin")
+	public String adminDashboardPage(Model model) {
+		return "adminDashboard";
+	}
 
 	@GetMapping("/login")
 	public String getLoginPage(Model model) {
-		model.addAttribute("loginRequest", new User());
+		model.addAttribute("loginRequest", new Login());
 		return "login";
 	}
 	
 	@PostMapping("/process_register")
 	public String RegisterNewUser(@ModelAttribute User user) {
-		System.out.println("register request : " + user);
-		User registeredUser = service.save(user);
-		return (registeredUser == null) ? "error" : "redirect:/login";
+		if(service.registerValidate(user)) {
+			System.out.println("register request : " + user);
+			service.save(user);
+			return "redirect:/login";
+		} else {
+			System.out.println("Register Process Failed");
+			return "redirect:/register";
+		}
+		
 	}
 
 	@PostMapping("/process_login")
-	public String loginUser(@ModelAttribute User user,Admin admin, Model model) {
-		System.out.println("login request : " + user);
-//		Object arr[] = service.listAll();
-//		System.out.println("Admin request : " + arr.equals();
-		User authenticated = service.authenticate(user.getEmail(), user.getPassword());
-		User getMobileNumber = service.get(user.getEmail());
-		model.addAttribute("mobileNum", getMobileNumber.getMobile());
-		if (authenticated != null) {
-			return "product";
-		} else {
-			return "error";
-		}
+	public String loginUser(@ModelAttribute Login login, Model model) {
+		System.out.println("login request : " + login);
+		String data = service.loginValidate(login);
+//		System.out.println("----" + service.getUser(login.getUsername()).getEmail());
+//		System.out.println("....." + service.getAdmin(login.getUsername()).getEmail());
+//		if(data.equals("redirect:/user")) {
+//			model.addAttribute("userEmail", );
+//		} else if(data.equals("redirect:/admin")) {
+//			model.addAttribute("adminEmail", );
+//		}
+		return data;
 	}
 	
 	@RequestMapping(value = { "/logout" }, method = RequestMethod.POST)
