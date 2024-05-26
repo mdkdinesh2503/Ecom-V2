@@ -1,7 +1,6 @@
 package com.ecommerce.service;
 
 import java.util.regex.*;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ecommerce.model.*;
@@ -21,23 +20,23 @@ public class LoginService implements regex {
 
 	@Autowired
 	private AdminRepository adminRepo;
-	
+
 	public User getUser(String email) {
 		return userRepo.findByEmail(email).get();
 	}
-	
+
 	public Admin getAdmin(String email) {
 		return adminRepo.findByEmail(email).get();
 	}
-	
+
 	public Admin getAdminDetails(String email, String password) {
 		return adminRepo.findByEmailAndPassword(email, password).orElse(null);
 	}
-	
+
 	public User getExistEmail(String email) {
 		return userRepo.findByEmail(email).orElse(null);
 	}
-	
+
 	public User getExistMobile(String mobile) {
 		return userRepo.findByMobile(mobile).orElse(null);
 	}
@@ -57,26 +56,29 @@ public class LoginService implements regex {
 			return userRepo.save(user);
 		}
 	}
-	
+
 //	Login Details
 	public String loginValidate(Login login) {
 		String username = login.getUsername();
 		String password = login.getPassword();
-		System.out.println("Email & Pass : " + emailAuthenticate(username, password));
-		System.out.println("Mobile & Pass : " + mobileAuthenticate(username, password));
-		System.out.println("Admin : " + getAdminDetails(username, password));
-		if(emailAuthenticate(username, password) != null || mobileAuthenticate(username, password) != null) {
+		System.out.println("EMAIL & PASS - " + emailAuthenticate(username, password));
+		System.out.println("MOBILE & PASS - " + mobileAuthenticate(username, password));
+		System.out.println("ADMIN - " + getAdminDetails(username, password));
+		if (emailAuthenticate(username, password) != null || mobileAuthenticate(username, password) != null) {
+			System.out.println("<------------- LOGIN PROCESS SUCCESS ** USER ------------>\n");
 			return "redirect:/user";
 		} else if (getAdminDetails(username, password) != null) {
+			System.out.println("<------------- LOGIN PROCESS SUCCESS ** ADMIN ------------>\n");
 			return "redirect:/admin";
 		} else {
+			System.out.println("<------------- LOGIN PROCESS FAILED ------------>\n");
 			return "redirect:/login";
 		}
 	}
-	
 
 //	Register Details
 	public boolean registerValidate(User user) {
+		System.out.println("\n<------------- ****REGISTER PROCESS STARTS**** ------------>");
 		boolean mobileValue = isValidCheck(user.getMobile(), mobileRegex, "mobile");
 		boolean emailValue = isValidCheck(user.getEmail(), emailRegex, "email");
 		boolean passwordValue = isValidCheck(user.getPassword(), passwordRegex, "password");
@@ -87,16 +89,17 @@ public class LoginService implements regex {
 	boolean isValidCheck(String value, String regex, String field) {
 		Pattern pattern = Pattern.compile(regex);
 		if (value.isEmpty() || !pattern.matcher(value).matches()) {
-			System.out.println(field + " - pattern not match");
+			System.out.println(field.toUpperCase() + " - pattern not match");
 			return false;
 		} else if (value.equalsIgnoreCase("admin@gmail.com") && field.equals("email")) {
-			System.out.println("Admin not allowed");
+			System.out.println("ADMIN - name not allowed");
 			return false;
-		} else if ((field.equals("mobile") && getExistMobile(value) != null) || (field.equals("email") && getExistEmail(value) != null)) {
-			System.out.println(field + " already exist");
+		} else if ((field.equals("mobile") && getExistMobile(value) != null)
+				|| (field.equals("email") && getExistEmail(value) != null)) {
+			System.out.println(field.toUpperCase() + " - already exist");
 			return false;
 		} else {
-			System.out.println(field + " - success");
+			System.out.println(field.toUpperCase() + " - success");
 			return true;
 		}
 	}

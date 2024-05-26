@@ -1,0 +1,962 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title name  -->
+	<title> P T | S h o p i e . </title>
+
+	<!-- Title logo link  -->
+	<link rel="icon" type="image/x-icon" href="./images/Title_Image.png">
+
+	<!-- Font awesome cdn link  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+	<!-- Font style poppins link -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700&effect=fire|neon|outline|emboss|shadow-multiple|Audiowide|Sofia|Trirong"
+		rel="stylesheet">
+
+	<!-- Font style connection link -->
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+
+	<!-- Header section starts here -->
+	<header>
+
+		<a class="header-logo" href="/" title="S h o p i e ."> <img src="./images/Title_Image.png" alt="Header Logo">
+			<p class="header-name">Shopie.</p>
+		</a>
+
+		<nav class="nav-bar">
+			<a href="/"><i class="fas fa-home"></i> Home</a>
+			<a href="/product" class="activated"><i class="fas fa-shopping-bag activated"></i> Products</a>
+			<a href="/contact"><i class="fas fa-address-book"></i> Contact</a>
+		</nav>
+
+		<div class="icon-container">
+			<div id="menu-btn" class="fas fa-bars"></div>
+			<img id="search-btn" src="./images/Home/Header/Search.png" alt="Header Search" title="Search">
+			<img id="cart-btn" src="./images/Home/Header/Cart.png" alt="Header Cart" title="Cart">
+			<a href="/login"><img src="./images/Home/Header/User.png" alt="Header User" title="Sign-in/Sign-up"></a>
+		</div>
+
+	</header>
+	<!-- Header section ends here -->
+
+	<!-- Products section starts here -->
+
+	<br><br><br>
+	<h1 class="heading"> <span> Special </span> Products </h1>
+
+	<div class="categories">
+
+		<div class="categories-filter">
+			<h2>Filters</h2>
+
+			<select disabled>
+				<option value="Product Categories" selected>Product Categories</option>
+			</select>
+			<div class="filter">
+				<div class="filter-content">
+					<input type="checkbox" hidden name="" id="Grocery">
+					<label for="Grocery">Grocery</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" hidden name="" id="Mobiles">
+					<label for="Mobiles">Mobiles</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" hidden name="" id="Fashion">
+					<label for="Fashion">Fashion</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" hidden name="" id="Electronics">
+					<label for="Electronics">Electronics</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" hidden name="" id="Furnitures">
+					<label for="Furnitures">Furnitures</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" hidden name="" id="Appliances">
+					<label for="Appliances">Appliances</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" hidden name="" id="Toys">
+					<label for="Toys">Toys</label>
+				</div>
+			</div>
+
+			<select disabled>
+				<option value="Price" selected>Price</option>
+			</select>
+			<div class="filter">
+				<div class="filter-content">
+					<input type="checkbox" name="" id="0-500">
+					<label for="0-500">Under &#8377;500</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" name="" id="500-1000">
+					<label for="500-1000">&#8377;500 to &#8377;1000</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" name="" id="1000-2000">
+					<label for="1000-2000">&#8377;1000 to &#8377;2000</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" name="" id="2000-5000">
+					<label for="2000-5000">&#8377;2000 to &#8377;5000</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" name="" id="5000+">
+					<label for="5000+">&#8377;5000 & Above</label>
+				</div>
+			</div>
+
+			<select disabled>
+				<option value="Size" selected>Size</option>
+			</select>
+			<div class="filter">
+				<div class="filter-content">
+					<input type="checkbox" name="" id="S">
+					<label for="S">S</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" name="" id="M">
+					<label for="M">M</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" name="" id="L">
+					<label for="L">L</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" name="" id="XL">
+					<label for="XL">XL</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" name="" id="XXL">
+					<label for="XXL">XXL</label>
+				</div>
+			</div>
+
+			<select disabled>
+				<option value="Customer Ratings" selected>Customer Ratings</option>
+			</select>
+			<div class="filter">
+				<div class="filter-content">
+					<input type="checkbox" name="" id="4-5">
+					<label for="4-5">4&#9733; & above</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" name="" id="3-5">
+					<label for="3-5">3&#9733; & above</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" name="" id="2-5">
+					<label for="2-5">2&#9733; & above</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" name="" id="1-5">
+					<label for="1-5">1&#9733; & above</label>
+				</div>
+			</div>
+
+			<select disabled>
+				<option value="Discount" selected>Discount</option>
+			</select>
+			<div class="filter">
+				<div class="filter-content">
+					<input type="checkbox" name="" id="75-100">
+					<label for="75-100">75% or more</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" name="" id="50-100">
+					<label for="50-100">50% or more</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" name="" id="25-100">
+					<label for="25-100">25% or more</label>
+				</div>
+				<div class="filter-content">
+					<input type="checkbox" name="" id="10-100">
+					<label for="10-100">10% or more</label>
+				</div>
+			</div>
+
+			<select disabled>
+				<option value="Availability" selected>Availability</option>
+			</select>
+			<div class="filter">
+				<div class="filter-content">
+					<input type="checkbox" name="" id="stock">
+					<label for="stock">Exclude Out of Stock</label>
+				</div>
+			</div>
+
+			<select disabled>
+				<option value="Offers" selected>Offers</option>
+			</select>
+			<div class="filter">
+				<div class="filter-content">
+					<input type="checkbox" name="" id="offer">
+					<label for="offer">Special price</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="categories-content">
+
+			<div class="cat-contents">
+
+				<div class="categories-product" title="Bluetooth Headphones With 30 mm Drivers, AUX">
+					<h2>-7%</h2>
+					<img src="./images/Products/Prod-1.jpg" alt="Bluetooth Headphones" />
+					<h3>Bluetooth Headphones With 30 mm Drivers, AUX...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;129.00</h4>
+								<h5>&#8377;139.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Willful Smart Watch for Android Phones Compatible">
+					<h2>-49%</h2>
+					<img src="./images/Products/Prod-2.jpg" alt="Smart Watch" />
+					<h3>Willful Smart Watch for Android Phones Compatible...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;240.00</h4>
+								<h5>&#8377;450.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Nike Goku And Luffy Pullover Hoodie – The Geek Gifts">
+					<img src="./images/Products/Prod-3.jpg" alt="Hoodies" />
+					<h3>Nike Goku And Luffy Pullover Hoodie – The Geek Gifts...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;59.00</h4>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-13%</h2>
+					<img src="./images/Products/Prod-4.jpg" alt="Backpack" />
+					<h3>Epoch Nylon 55 litres Waterproof Strolley Duffle...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;199.00</h4>
+								<h5>&#8377;299.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-13%</h2>
+					<img src="./images/Products/Prod-5.jpg" alt="Backpack" />
+					<h3>Epoch Nylon 55 litres Waterproof Strolley Duffle...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;199.00</h4>
+								<h5>&#8377;299.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-6%</h2>
+					<img src="./images/Products/Prod-6.jpg" alt="Backpack" />
+					<h3>Samsung Galaxy M21 Mobile Phone – Blue(UK Version)...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;599.00</h4>
+								<h5>&#8377;639.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-22%</h2>
+					<img src="./images/Products/Prod-7.jpg" alt="Backpack" />
+					<h3>Microsoft Xbox One Controller – Gears 5 Kait Diaz...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;109.00</h4>
+								<h5>&#8377;139.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-13%</h2>
+					<img src="./images/Products/Prod-8.jpg" alt="Backpack" />
+					<h3>Epoch Nylon 55 litres Waterproof Strolley Duffle...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;199.00</h4>
+								<h5>&#8377;299.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-13%</h2>
+					<img src="./images/Products/Prod-9.jpg" alt="Backpack" />
+					<h3>Epoch Nylon 55 litres Waterproof Strolley Duffle...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;199.00</h4>
+								<h5>&#8377;299.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-13%</h2>
+					<img src="./images/Products/Prod-10.jpg" alt="Backpack" />
+					<h3>Epoch Nylon 55 litres Waterproof Strolley Duffle...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;199.00</h4>
+								<h5>&#8377;299.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-13%</h2>
+					<img src="./images/Products/Prod-11.jpg" alt="Backpack" />
+					<h3>Epoch Nylon 55 litres Waterproof Strolley Duffle...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;199.00</h4>
+								<h5>&#8377;299.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-13%</h2>
+					<img src="./images/Products/Prod-12.jpg" alt="Backpack" />
+					<h3>Epoch Nylon 55 litres Waterproof Strolley Duffle...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;199.00</h4>
+								<h5>&#8377;299.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-13%</h2>
+					<img src="./images/Products/Prod-13.jpg" alt="Backpack" />
+					<h3>Epoch Nylon 55 litres Waterproof Strolley Duffle...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;199.00</h4>
+								<h5>&#8377;299.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-13%</h2>
+					<img src="./images/Products/Prod-14.jpg" alt="Backpack" />
+					<h3>Foxin Over-Ear Wireless Stereo Headphone Black Red...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;199.00</h4>
+								<h5>&#8377;299.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<img src="./images/Products/Prod-15.jpg" alt="Backpack" />
+					<h3>Dettol Original Germ Protection Handwash Liquid...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;199.00</h4>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-13%</h2>
+					<img src="./images/Products/Prod-16.jpg" alt="Backpack" />
+					<h3>Epoch Nylon 55 litres Waterproof Strolley Duffle...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;199.00</h4>
+								<h5>&#8377;299.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-13%</h2>
+					<img src="./images/Products/Prod-17.jpg" alt="Backpack" />
+					<h3>Epoch Nylon 55 litres Waterproof Strolley Duffle...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;199.00</h4>
+								<h5>&#8377;299.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2 class="product-active">SOLD</h2>
+					<img src="./images/Products/Prod-18.jpg" alt="Backpack" />
+					<h3>Naruto And X-Hunter Pullover Hoodie – The Geek...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;199.00</h4>
+								<h5>&#8377;299.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-13%</h2>
+					<img src="./images/Products/Prod-19.jpg" alt="Backpack" />
+					<h3>Epoch Nylon 55 litres Waterproof Strolley Duffle...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;199.00</h4>
+								<h5>&#8377;299.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-22%</h2>
+					<img src="./images/Products/Prod-20.jpg" alt="Backpack" />
+					<h3>Florence-Mesh Leather Lace Up Sneakers...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;109.00</h4>
+								<h5>&#8377;139.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-49%</h2>
+					<img src="./images/Products/Prod-21.jpg" alt="Backpack" />
+					<h3>Hair Remover Shaver with Extra Replacement Head...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;14.90</h4>
+								<h5>&#8377;29.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<img src="./images/Products/Prod-22.jpg" alt="Backpack" />
+					<h3>Mission Cables Skin For Echo Spot – Candy...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;13.90</h4>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-26%</h2>
+					<img src="./images/Products/Prod-23.jpg" alt="Backpack" />
+					<h3>Prestige Delight Electric Rice Cooker 1.8-2 (700 watts)...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;117.00</h4>
+								<h5>&#8377;159.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-26%</h2>
+					<img src="./images/Products/Prod-24.jpg" alt="Backpack" />
+					<h3>Prestige Delight Electric Rice Cooker 1.8-2 (700 watts)...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;117.00</h4>
+								<h5>&#8377;159.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-26%</h2>
+					<img src="./images/Products/Prod-25.jpg" alt="Backpack" />
+					<h3>Prestige Delight Electric Rice Cooker 1.8-2 (700 watts)...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;117.00</h4>
+								<h5>&#8377;159.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-26%</h2>
+					<img src="./images/Products/Prod-26.jpg" alt="Backpack" />
+					<h3>Prestige Delight Electric Rice Cooker 1.8-2 (700 watts)...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;117.00</h4>
+								<h5>&#8377;159.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-26%</h2>
+					<img src="./images/Products/Prod-27.jpg" alt="Backpack" />
+					<h3>Prestige Delight Electric Rice Cooker 1.8-2 (700 watts)...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;117.00</h4>
+								<h5>&#8377;159.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-26%</h2>
+					<img src="./images/Products/Prod-28.jpg" alt="Backpack" />
+					<h3>Prestige Delight Electric Rice Cooker 1.8-2 (700 watts)...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;117.00</h4>
+								<h5>&#8377;159.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-26%</h2>
+					<img src="./images/Products/Prod-29.jpg" alt="Backpack" />
+					<h3>Prestige Delight Electric Rice Cooker 1.8-2 (700 watts)...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;117.00</h4>
+								<h5>&#8377;159.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-26%</h2>
+					<img src="./images/Products/Prod-30.jpg" alt="Backpack" />
+					<h3>Prestige Delight Electric Rice Cooker 1.8-2 (700 watts)...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;117.00</h4>
+								<h5>&#8377;159.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+				<div class="categories-product" title="Epoch Nylon 55 litres Waterproof Strolley Duffle">
+					<h2>-26%</h2>
+					<img src="./images/Products/Prod-31.jpg" alt="Backpack" />
+					<h3>Prestige Delight Electric Rice Cooker 1.8-2 (700 watts)...</h3>
+					<div class="cat-container">
+						<div class="cat-content">
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="far fa-star"></i>
+							</div>
+							<div class="amount">
+								<h4>&#8377;117.00</h4>
+								<h5>&#8377;159.00</h5>
+							</div>
+						</div>
+						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Products section ends here -->
+
+	<!-- footer section starts here-->
+	<footer>
+
+		<div class="box-container">
+
+			<div class="box">
+				<a class="footer-logo" href="/" title="S h o p i e ."> <img src="./images/Title_Image.png"
+						alt="footer Logo">
+					<p class="footer-name">Shopie.</p>
+				</a>
+				<div class="divder">
+					<a>Address : </a>
+					<p>2593 Timbercrest Road, Chisana, Alaska Badalas United State</p>
+					<a>Phone: </a>
+					<p>706-676-8237</p>
+					<a>Email : </a>
+					<p>demo@shopie.com</p>
+				</div>
+			</div>
+
+			<div class="box">
+				<h3>quick links</h3>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Special Offers </a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Gift Cards </a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Orders </a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Cart Details</a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Track your Order </a>
+			</div>
+
+			<div class="box">
+				<h3>Connect</h3>
+				<a class="sec secf"><i class="fab fa-facebook-f"></i> facebook </a>
+				<a class="sec seci"><i class="fab fa-instagram"></i> instagram </a>
+				<a class="sec secw"><i class="fab fa-whatsapp"></i> WhatsApp </a>
+				<a class="sec sect"><i class="fab fa-twitter"></i> Twitter </a>
+			</div>
+
+			<div class="box">
+				<h3>Customer Service</h3>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Privacy Policy</a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Terms & Conditions</a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Location & Working Hours</a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Our Guarantee</a>
+				<a class="link"><i class="fas fa-hand-point-right"></i> Contact</a>
+
+			</div>
+
+		</div>
+
+		<div class="credit">----- © Copyright 2024 <span>Shopie.</span> - All Rights Reserved - Design Belongs to <span>
+				Dinesh Kumar M</span>. -----</div>
+
+	</footer>
+	<!-- footer section ends here-->
+
+</body>
+
+<!-- Javascript connection link  -->
+<script src="./script.js"></script>
+
+</html>
