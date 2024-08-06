@@ -1,0 +1,171 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title name  -->
+	<title> O R D R | S h o p i e . (A) </title>
+
+	<!-- Title logo link  -->
+	<link rel="icon" type="image/x-icon" href="./images/Title_Image.png">
+
+	<!-- Font awesome cdn link  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+	<!-- Font style poppins link -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+
+	<!-- Font style connection link -->
+	<link rel="stylesheet" th:href="@{/css/styleAdmin.css}">
+
+</head>
+
+<body>
+
+	<body>
+
+		<!-- Header section starts here -->
+		<header>
+
+			<a class="header-logo" href="/" title="S h o p i e ."> <img src="./images/Title_Image.png"
+					alt="Header Logo">
+				<p class="header-name">Shopie.</p>
+			</a>
+
+			<h1>Orders</h1>
+
+			<a class="header-logout" href="/login" title="Logout">
+				Logout<img src="./images/LogOut.png" alt="->">
+			</a>
+
+		</header>
+		<!-- Header section ends here -->
+
+		<!-- Dashboard section starts here  -->
+		<div class="main">
+
+			<ul id="sidebar">
+				<li><a href="/adminDashboard"><i class="fas fa-home"></i>Dashboard</a></li>
+				<li><a href="/adminCustomers"><i class="fas fa-users"></i>Cutomers</a></li>
+				<li><a href="/adminCategories"><i class="fas fa-shopping-basket"></i>Categories</a></li>
+				<li><a href="/adminProducts"><i class="fas fa-shopping-bag"></i>Products</a></li>
+				<li class="activated"><a href="/adminOrders"><i class="fas fa-shipping-fast"></i>Orders</a></li>
+				<li><a href="/adminPayments"><i class="fas fa-money-check"></i>Payments</a></li>
+				<li><a href="/adminReviews"><i class="fas fa-file-alt"></i>Reviews</a></li>
+				<li><a href="/adminSettings"><i class="fas fa-cog fa-spin"></i>Settings</a></li>
+			</ul>
+
+			<div class="main-content">
+				<div class="main-content-1">
+					<div class="cards">
+						<i class="fas fa-clipboard-list"></i>
+						<h1>Total</h1>
+						<p>50+</p>
+					</div>
+					<div class="cards">
+						<i class="fas fa-vote-yea"></i>
+						<h1>Completed</h1>
+						<p>50+</p>
+					</div>
+					<div class="cards">
+						<i class="fas fa-check"></i>
+						<h1>Confirmed</h1>
+						<p>22+</p>
+					</div>
+					<div class="cards">
+						<i class="fas fa-ban"></i>
+						<h1>Canceled</h1>
+						<p>500+</p>
+					</div>
+					<div class="cards">
+						<i class="fas fa-undo-alt"></i>
+						<h1>Refunded</h1>
+						<p>30+</p>
+					</div>
+				</div>
+
+				<table class="list-table">
+
+					<thead>
+						<tr>
+							<th>Id <span class="fas fa-sort-numeric-down"></span></th>
+							<th>Order Id <span class="fas fa-sort-numeric-down"></span></th>
+							<th>Ordered date <span class="fas fa-sort-numeric-down"></span></th>
+							<th>Customer name <span class="fas fa-sort-alpha-down"></span></th>
+							<th>status</th>
+							<th>price <span class="fas fa-sort-numeric-down"></span></th>
+							<th>View</th>
+						</tr>
+					</thead>
+
+					<tbody>
+
+						<tr>
+							<td>01</td>
+							<td>#5421</td>
+							<td>25-05-2023</td>
+							<td>Dinesh Kumar</td>
+							<td>Completed</td>
+							<td>&#8377;5000</td>
+							<td><a href="/adminViewOrders"><i class="fas fa-eye" title="view"></i></a></td>
+						</tr>
+
+						<tr>
+							<td>02</td>
+							<td>#8546</td>
+							<td>02-05-2023</td>
+							<td>Aparna</td>
+							<td>Refunded</td>
+							<td>&#8377;8054</td>
+							<td><a href="/adminViewOrders"><i class="fas fa-eye" title="view"></i></a></td>
+						</tr>
+
+						<tr>
+							<td>03</td>
+							<td>#2121</td>
+							<td>15-09-2023</td>
+							<td>Reshika</td>
+							<td>Processing</td>
+							<td>&#8377;14000</td>
+							<td><a href="/adminViewOrders"><i class="fas fa-eye" title="view"></i></a></td>
+						</tr>
+
+						<tr>
+							<td>04</td>
+							<td>#9205</td>
+							<td>05-01-2023</td>
+							<td>Ganesh</td>
+							<td>Cancelled</td>
+							<td>&#8377;2500</td>
+							<td><a href="/adminViewOrders"><i class="fas fa-eye" title="view"></i></a></td>
+						</tr>
+
+						<tr>
+							<td>05</td>
+							<td>#7516</td>
+							<td>30-05-2023</td>
+							<td>Kiran</td>
+							<td>Processing</td>
+							<td>&#8377;580</td>
+							<td><a href="/adminViewOrders"><i class="fas fa-eye" title="view"></i></a></td>
+						</tr>
+
+					</tbody>
+
+				</table>
+
+			</div>
+
+		</div>
+		<!-- Dashboard section ends here  -->
+
+	</body>
+
+	<!-- Javascript connection link  -->
+	<script type="text/javascript" th:src="@{/js/adminScript.js}"></script>
+
+</html>

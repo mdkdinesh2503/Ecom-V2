@@ -69,13 +69,6 @@ public class LoginController {
 		System.out.println("\n<------------- ****LOGIN PROCESS STARTS**** ------------>");
 		System.out.println("LOGIN VALUE : " + login);
 		String data = service.loginValidate(login);
-//		System.out.println("----" + service.getUser(login.getUsername()).getEmail());
-//		System.out.println("....." + service.getAdmin(login.getUsername()).getEmail());
-//		if(data.equals("redirect:/user")) {
-//			model.addAttribute("userEmail", );
-//		} else if(data.equals("redirect:/admin")) {
-//			model.addAttribute("adminEmail", );
-//		}
 		return data;
 	}
 

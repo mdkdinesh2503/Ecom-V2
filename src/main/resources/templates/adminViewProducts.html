@@ -1,0 +1,125 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title name  -->
+	<title> V I E W - P R D T | S h o p i e . (A) </title>
+
+	<!-- Title logo link  -->
+	<link rel="icon" type="image/x-icon" href="./images/Title_Image.png">
+
+	<!-- Font awesome cdn link  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+	<!-- Font style poppins link -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+
+	<!-- Font style connection link -->
+	<link rel="stylesheet" th:href="@{/css/styleAdmin.css}">
+
+</head>
+
+<body>
+
+	<!-- Header section starts here -->
+	<header>
+
+		<a class="header-logo" href="/" title="S h o p i e ."> <img src="./images/Title_Image.png"
+				alt="Header Logo">
+			<p class="header-name">Shopie.</p>
+		</a>
+
+		<h1>View Product</h1>
+
+		<a class="header-logout" href="/login" title="Logout">
+			Logout<img src="./images/LogOut.png" alt="->">
+		</a>
+
+	</header>
+	<!-- Header section ends here -->
+
+	<!-- Customers section starts here  -->
+	<div class="main">
+
+		<ul id="sidebar">
+			<li><a href="/adminDashboard"><i class="fas fa-home"></i>Dashboard</a></li>
+			<li><a href="/adminCustomers"><i class="fas fa-users"></i>Cutomers</a></li>
+			<li><a href="/adminCategories"><i class="fas fa-shopping-basket"></i>Categories</a></li>
+			<li class="activated"><a href="/adminProducts"><i class="fas fa-shopping-bag"></i>Products</a></li>
+			<li><a href="/adminOrders"><i class="fas fa-shipping-fast"></i>Orders</a></li>
+			<li><a href="/adminPayments"><i class="fas fa-money-check"></i>Payments</a></li>
+			<li><a href="/adminReviews"><i class="fas fa-file-alt"></i>Reviews</a></li>
+			<li><a href="/adminSettings"><i class="fas fa-cog fa-spin"></i>Settings</a></li>
+		</ul>
+
+		<div class="main-content">
+
+			<div class="single-products-container">
+
+				<div class="header-single">
+
+					<h1><i class="fas fa-shopping-bag"></i> Products - Accessories</h1>
+
+					<a href="/adminProducts"><i class="fas fa-times"></i></a>
+
+				</div>
+
+				<div class="single-product" id="single-product-view">
+
+					<div class="single-product-content">
+						<img src="./images/Products/Prod-3.jpg" />
+						<div class="product-content">
+							<p class="discount">Discount : <span>47%</span></p>
+							<div class="star-rating">
+								<span onclick="rate(1)" class="fill-rate">★
+								</span>
+								<span onclick="rate(2)" class="fill-rate">★
+								</span>
+								<span onclick="rate(3)" class="fill-rate">★
+								</span>
+								<span onclick="rate(4)" class="fill-rate">★
+								</span>
+								<span onclick="rate(5)" class="fill-rate">★
+								</span>
+							</div>
+							<span class="review">(255)</span>
+							<h5 class="productId">Product Id : <span>5214</span></h5>
+							<h3>Nike Goku And Luffy Pullover Hoodie – The Geek Gifts</h3>
+							<p>seeeeeeeeffffffffffffffffffffffffffffffffNike Goku And Luffy Pullover Hoodie – The Geek
+								Giftsffffffffffffffffdfdfdfdf</p>
+
+							<div class="amount">
+								<h4>&#8377;255.00</h4>
+								<h5>&#8377;877.00</h5>
+							</div>
+							<h2>Category : <span>Accessories</span></h2>
+							<h2>Available : <span>50</span></h2>
+							<h2>Status : <span>In Stock</span></h2>
+
+							<div class="product-buttons">
+								<a href=""><i class="fas fa-trash-alt"></i> Delete</a>
+								<a href="/adminEditProducts"><i class="fas fa-edit"></i> Edit Product</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- Customers section ends here  -->
+
+</body>
+
+<!-- Javascript connection link  -->
+<script type="text/javascript" th:src="@{/js/adminScript.js}"></script>
+
+</html>

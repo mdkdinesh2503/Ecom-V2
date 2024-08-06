@@ -1,0 +1,212 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title name  -->
+	<title> A D D - P R D T | S h o p i e . (A) </title>
+
+	<!-- Title logo link  -->
+	<link rel="icon" type="image/x-icon" href="./images/Title_Image.png">
+
+	<!-- Font awesome cdn link  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+	<!-- Font style poppins link -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+
+	<!-- Font style connection link -->
+	<link rel="stylesheet" th:href="@{/css/styleAdmin.css}">
+
+</head>
+
+<body>
+
+	<body>
+
+		<!-- Header section starts here -->
+		<header>
+
+			<a class="header-logo" href="/" title="S h o p i e ."> <img src="./images/Title_Image.png"
+					alt="Header Logo">
+				<p class="header-name">Shopie.</p>
+			</a>
+
+			<h1>Add Product</h1>
+
+			<a class="header-logout" href="/login" title="Logout">
+				Logout<img src="./images/LogOut.png" alt="->">
+			</a>
+
+		</header>
+		<!-- Header section ends here -->
+
+		<!-- Customers section starts here  -->
+		<div class="main">
+
+			<ul id="sidebar">
+				<li><a href="/adminDashboard"><i class="fas fa-home"></i>Dashboard</a></li>
+				<li><a href="/adminCustomers"><i class="fas fa-users"></i>Cutomers</a></li>
+				<li><a href="/adminCategories"><i class="fas fa-shopping-basket"></i>Categories</a></li>
+				<li class="activated"><a href="/adminProducts"><i class="fas fa-shopping-bag"></i>Products</a></li>
+				<li><a href="/adminOrders"><i class="fas fa-shipping-fast"></i>Orders</a></li>
+				<li><a href="/adminPayments"><i class="fas fa-money-check"></i>Payments</a></li>
+				<li><a href="/adminReviews"><i class="fas fa-file-alt"></i>Reviews</a></li>
+				<li><a href="/adminSettings"><i class="fas fa-cog fa-spin"></i>Settings</a></li>
+			</ul>
+
+			<div class="main-content">
+
+				<div class="header-single add-extra-header">
+
+					<h1><i class="fas fa-plus"></i> New Product</h1>
+
+					<a href="/adminProducts"><i class="fas fa-times"></i></a>
+
+				</div>
+
+				<form class="Product-forms" th:action="@{/process_AddProduct}" method="post"
+					th:object="${AddProductRequest}">
+
+					<div class="forms-seperate">
+
+						<div class="fields">
+
+							<p class="main-input-name">Id</p>
+
+							<div class="product-input">
+								<i class="fas fa-info-circle"></i>
+								<input th:field="*{id}" type="number" name="id" id="id" placeholder="id..."
+									autocomplete="off" required />
+							</div>
+
+							<p class="main-input-name">Title</p>
+
+							<div class="product-input">
+								<i class="fas fa-file"></i>
+								<textarea th:field="*{title}" name="title" id="title" placeholder="title..."
+									autocomplete="off" required></textarea>
+							</div>
+
+							<p class="main-input-name">Description</p>
+
+							<div class="product-input">
+								<i class="fas fa-file-alt"></i>
+								<textarea th:field="*{description}" name="description" id="description"
+									placeholder="description..." autocomplete="off" required></textarea>
+							</div>
+
+							<p class="main-input-name">Price</p>
+
+							<div class="product-input">
+								<i class="fas fa-rupee-sign"></i>
+								<input th:field="*{price}" type="number" name="price" id="price" placeholder="price..."
+									autocomplete="off" required />
+							</div>
+
+							<p class="main-input-name">Discount</p>
+
+							<div class="product-input">
+								<i class="fas fa-percentage"></i>
+								<input th:field="*{discount}" type="text" name="discount" id="discount"
+									placeholder="discount..." autocomplete="off" required />
+							</div>
+
+						</div>
+
+						<div class="fields">
+
+							<p class="main-input-name">Category</p>
+
+							<div class="product-input">
+								<i class="fas fa-shopping-basket"></i>
+								<select th:field="*{category}" name="category" id="category" required>
+									<option disabled selected class="disabled">Select category</option>
+									<option value="Grocery">Grocery</option>
+									<option value="Mobiles">Mobiles</option>
+									<option value="Fashion">Fashion</option>
+									<option value="Electronics">Electronics</option>
+									<option value="Furnitures">Furnitures</option>
+									<option value="Appliances">Appliances</option>
+									<option value="Toys">Toys</option>
+								</select>
+							</div>
+
+							<p class="main-input-name">Available</p>
+
+							<div class="product-input">
+								<i class="fas fa-plus"></i>
+								<input th:field="*{available}" type="number" name="available" id="available"
+									placeholder="available..." autocomplete="off" required />
+							</div>
+
+							<p class="main-input-name">rating</p>
+
+							<div class="product-input">
+								<i class="fas fa-star"></i>
+								<div class="product-rate">
+									<span onclick="rate(1)" class="star">★
+									</span>
+									<span onclick="rate(2)" class="star">★
+									</span>
+									<span onclick="rate(3)" class="star">★
+									</span>
+									<span onclick="rate(4)" class="star">★
+									</span>
+									<span onclick="rate(5)" class="star">★
+									</span>
+								</div>
+								<input disabled type="text" value=" Star Rating : " />
+								<input th:field="*{rating}" disabled type="text" name="rating" id="rating"
+									autocomplete="off" required value="0" />
+							</div>
+
+							<p class="main-input-name">Reviews</p>
+
+							<div class="product-input">
+								<i class="fas fa-user"></i>
+								<input th:field="*{ratingCount}" type="number" name="ratingCount" id="ratingCount"
+									placeholder="rating count..." autocomplete="off" required />
+							</div>
+
+							<p class="main-input-name">Image</p>
+
+							<div class="product-input">
+								<i class="fas fa-image"></i>
+								<input th:field="*{image}" type="file" name="image" id="image" placeholder="image..."
+									autocomplete="off" required />
+							</div>
+
+							<div class="buttons">
+
+								<button id="smtbtn" type="submit" class="btn">
+									<i class="fas fa-plus"></i> Create
+								</button>&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;
+
+								<a id="cancelbtn" href="/adminProducts" class="btn">
+									<i class="fas fa-times"></i> Cancel
+								</a>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</form>
+
+			</div>
+
+		</div>
+		<!-- Customers section ends here  -->
+
+	</body>
+
+	<!-- Javascript connection link  -->
+	<script type="text/javascript" th:src="@{/js/adminScript.js}"></script>
+
+</html>

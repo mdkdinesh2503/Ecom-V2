@@ -8,8 +8,6 @@ import org.springframework.stereotype.Repository;
 import com.ecommerce.model.*;
 
 
-
-
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 	

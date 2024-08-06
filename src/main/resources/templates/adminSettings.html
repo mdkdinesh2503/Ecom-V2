@@ -1,0 +1,202 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title name  -->
+	<title> S T N G | S h o p i e . (A) </title>
+
+	<!-- Title logo link  -->
+	<link rel="icon" type="image/x-icon" href="./images/Title_Image.png">
+
+	<!-- Font awesome cdn link  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+	<!-- Font style poppins link -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+
+	<!-- Font style connection link -->
+	<link rel="stylesheet" th:href="@{/css/styleAdmin.css}">
+
+</head>
+
+<body>
+
+	<body>
+
+		<!-- Header section starts here -->
+		<header>
+
+			<a class="header-logo" href="/" title="S h o p i e ."> <img src="./images/Title_Image.png"
+					alt="Header Logo">
+				<p class="header-name">Shopie.</p>
+			</a>
+
+			<h1>Settings</h1>
+
+			<a class="header-logout" href="/login" title="Logout">
+				Logout<img src="./images/LogOut.png" alt="->">
+			</a>
+
+		</header>
+		<!-- Header section ends here -->
+
+		<!-- Settings section starts here  -->
+		<div class="main">
+
+			<ul id="sidebar">
+				<li><a href="/adminDashboard"><i class="fas fa-home"></i>Dashboard</a></li>
+				<li><a href="/adminCustomers"><i class="fas fa-users"></i>Cutomers</a></li>
+				<li><a href="/adminCategories"><i class="fas fa-shopping-basket"></i>Categories</a></li>
+				<li><a href="/adminProducts"><i class="fas fa-shopping-bag"></i>Products</a></li>
+				<li><a href="/adminOrders"><i class="fas fa-shipping-fast"></i>Orders</a></li>
+				<li><a href="/adminPayments"><i class="fas fa-money-check"></i>Payments</a></li>
+				<li><a href="/adminReviews"><i class="fas fa-file-alt"></i>Reviews</a></li>
+				<li class="activated"><a href="/adminSettings"><i class="fas fa-cog fa-spin"></i>Settings</a></li>
+			</ul>
+
+			<div class="main-content">
+
+				<div class="settings">
+					<h1><i class="fas fa-user"></i> My Account</h1><br>
+
+					<fieldset>
+
+						<legend>My Information</legend>
+
+						<div class="fields">
+
+							<p class="main-input-name">Username</p>
+
+							<div class="main-input">
+								<i class="fas fa-user"></i>
+								<input disabled type="text" placeholder="admin">
+							</div>
+
+						</div>
+
+						<div class="fields">
+
+							<p class="main-input-name">Email</p>
+
+							<div class="main-input">
+								<i class="fas fa-envelope"></i>
+								<input disabled type="text" placeholder="admin@gmail.com">
+							</div>
+
+						</div>
+
+						<div class="fields">
+
+							<p class="main-input-name">Password</p>
+
+							<div class="main-input">
+								<i class="fas fa-lock"></i>
+								<input disabled type="text" placeholder="Admin@123">
+							</div>
+
+						</div>
+
+					</fieldset>
+
+					<div class="main-add-list">
+
+						<form class="add-table"	th:action="@{/process_AddAdmin}" method="post"
+										th:object="${AddAdminRequest}">
+
+							<h1>Add New Admin</h1>
+
+							<p class="main-input-name">Admin Username</p>
+
+							<div class="main-input">
+								<i class="fas fa-user"></i>
+								<input th:field="*{username}" type="text" id="username" name="username" placeholder="Username..."
+									autocomplete="off" onkeyup="categoryValidate()" required>
+							</div>
+
+							<p class="main-input-name">Admin Password</p>
+
+							<div class="main-input">
+								<i class="fas fa-lock"></i>
+								<input th:field="*{password}" type="text" id="password" name="password" placeholder="Password..."
+									autocomplete="off" onkeyup="categoryValidate()" required>
+							</div>
+
+							<div class="buttons">
+
+								<button id="smtbtn" type="submit" class="btn">
+									<i class="fas fa-plus"></i> Create
+								</button>
+
+							</div>
+
+						</form>
+
+						<table class="list-table">
+
+							<thead>
+								<tr>
+									<th>Id <span class="fas fa-sort-numeric-down"></span></th>
+									<th>Email <span class="fas fa-sort-alpha-down"></span></th>
+									<th>Password</th>
+									<th>Delete</th>
+									<th>Edit</th>
+								</tr>
+							</thead>
+
+							<tbody>
+
+								<tr>
+									<td>01</td>
+									<td>Dinesh</td>
+									<td>Dinesh@123</td>
+									<td><i class="fas fa-trash-alt"></i></td>
+									<td><a href="adminEditSettings"><i class="fas fa-edit"></i></a></td>
+								</tr>
+
+								<tr>
+									<td>02</td>
+									<td>Aparna</td>
+									<td>Aparna@123</td>
+									<td><i class="fas fa-trash-alt"></i></td>
+									<td><a href="adminEditSettings"><i class="fas fa-edit"></i></a></td>
+								</tr>
+
+								<tr>
+									<td>03</td>
+									<td>Divya</td>
+									<td>Divya@123</td>
+									<td><i class="fas fa-trash-alt"></i></td>
+									<td><a href="adminEditSettings"><i class="fas fa-edit"></i></a></td>
+								</tr>
+
+								<tr>
+									<td>04</td>
+									<td>Reshika</td>
+									<td>Reshika@123</td>
+									<td><i class="fas fa-trash-alt"></i></td>
+									<td><a href="adminEditSettings"><i class="fas fa-edit"></i></a></td>
+								</tr>
+
+							</tbody>
+
+						</table>
+
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<!-- Settings section ends here  -->
+
+	</body>
+
+	<!-- Javascript connection link  -->
+	<script type="text/javascript" th:src="@{/js/adminScript.js}"></script>
+
+</html>

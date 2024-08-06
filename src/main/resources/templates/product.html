@@ -214,31 +214,34 @@
 
 		<div class="categories-content">
 
-			<div class="cat-contents">
+			<div:forEach items="${product}" class="cat-contents">
 
 				<div class="categories-product" title="Bluetooth Headphones With 30 mm Drivers, AUX">
-					<h2>-7%</h2>
+					<h2>-${Product.discount}%</h2>
 					<img src="./images/Products/Prod-1.jpg" alt="Bluetooth Headphones" />
-					<h3>Bluetooth Headphones With 30 mm Drivers, AUX...</h3>
+					<h3>${product.productName}</h3>
 					<div class="cat-container">
 						<div class="cat-content">
-							<div class="star">
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="far fa-star"></i>
+							<div class="rating">
+								<div class="star">
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="far fa-star"></i>
+								</div>
+								<p class="rate-count">( 250 )</p>
 							</div>
 							<div class="amount">
-								<h4>&#8377;129.00</h4>
-								<h5>&#8377;139.00</h5>
+								<h4>&#8377;${product.sellingPrice}</h4>
+								<h5>&#8377;${product.discountPrice}</h5>
 							</div>
 						</div>
 						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
 					</div>
 				</div>
 
-				<div class="categories-product" title="Willful Smart Watch for Android Phones Compatible">
+				<!--	<div class="categories-product" title="Willful Smart Watch for Android Phones Compatible">
 					<h2>-49%</h2>
 					<img src="./images/Products/Prod-2.jpg" alt="Smart Watch" />
 					<h3>Willful Smart Watch for Android Phones Compatible...</h3>
@@ -890,10 +893,10 @@
 						</div>
 						<i class="fas fa-shopping-cart" title="Add to Cart"></i>
 					</div>
-				</div>
+				</div> -->
 
-			</div>
 		</div>
+	</div>
 
 	</div>
 
@@ -957,6 +960,6 @@
 </body>
 
 <!-- Javascript connection link  -->
-<script src="./script.js"></script>
+<script type="text/javascript" th:src="@{/js/script.js}"></script>
 
 </html>

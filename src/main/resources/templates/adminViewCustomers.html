@@ -1,0 +1,140 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title name  -->
+	<title> V I E W - C S T R | S h o p i e . (A) </title>
+
+	<!-- Title logo link  -->
+	<link rel="icon" type="image/x-icon" href="./images/Title_Image.png">
+
+	<!-- Font awesome cdn link  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+	<!-- Font style poppins link -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+
+	<!-- Font style connection link -->
+	<link rel="stylesheet" th:href="@{/css/styleAdmin.css}">
+
+</head>
+
+<body>
+
+	<body>
+
+		<!-- Header section starts here -->
+		<header>
+
+			<a class="header-logo" href="/" title="S h o p i e ."> <img src="./images/Title_Image.png"
+					alt="Header Logo">
+				<p class="header-name">Shopie.</p>
+			</a>
+
+			<h1>View Customer</h1>
+
+			<a class="header-logout" href="/login" title="Logout">
+				Logout<img src="./images/LogOut.png" alt="->">
+			</a>
+
+		</header>
+		<!-- Header section ends here -->
+
+		<!-- Customers section starts here  -->
+		<div class="main">
+
+			<ul id="sidebar">
+				<li><a href="/adminDashboard"><i class="fas fa-home"></i>Dashboard</a></li>
+				<li class="activated"><a href="/adminCustomers"><i class="fas fa-users"></i>Cutomers</a></li>
+				<li><a href="/adminCategories"><i class="fas fa-shopping-basket"></i>Categories</a></li>
+				<li><a href="/adminProducts"><i class="fas fa-shopping-bag"></i>Products</a></li>
+				<li><a href="/adminOrders"><i class="fas fa-shipping-fast"></i>Orders</a></li>
+				<li><a href="/adminPayments"><i class="fas fa-money-check"></i>Payments</a></li>
+				<li><a href="/adminReviews"><i class="fas fa-file-alt"></i>Reviews</a></li>
+				<li><a href="/adminSettings"><i class="fas fa-cog fa-spin"></i>Settings</a></li>
+			</ul>
+
+			<div class="main-content">
+
+				<div class="header-single add-extra-header">
+
+					<h1><i class="fas fa-user"></i> Customer Details</h1>
+
+					<a href="/adminCustomers"><i class="fas fa-times"></i></a>
+
+				</div>
+
+				<div class="view-data">
+
+					<div class="fields">
+
+						<div class="view-input">
+							<p class="input-name">NAME</p>
+							<textarea name="" id="" rows="1" cols="30" disabled>Dinesh Kumar M</textarea>
+						</div><br><br>
+
+						<div class="view-input">
+							<p class="input-name">Email</p>
+							<textarea name="" id="" rows="1" cols="30" disabled>mdkdinesh2503@gmail.com</textarea>
+						</div><br><br>
+
+						<div class="view-input">
+							<p class="input-name">Mobile Number</p>
+							<textarea name="" id="" rows="1" cols="30" disabled>9787943467</textarea>
+						</div><br><br>
+
+						<div class="view-input">
+							<p class="input-name">GENDER</p>
+							<textarea name="" id="" rows="1" cols="30" disabled>Male</textarea>
+						</div><br><br>
+
+						<div class="view-input">
+							<p class="input-name">Landmark</p>
+							<textarea name="" id="" rows="1" cols="30" disabled>Near Priya Tower</textarea>
+						</div>
+
+					</div>
+
+					<div class="fields">
+
+						<div class="view-input">
+							<p class="input-name">ADDRESS</p>
+							<textarea name="" id="" rows="2" cols="30"
+								disabled>13/1,Kamarajar Street, T.Nager, Chennai-637001</textarea>
+						</div><br><br>
+
+						<div class="view-input">
+							<p class="input-name">Pincode</p>
+							<textarea name="" id="" rows="1" cols="30" disabled>637001</textarea>
+						</div><br><br>
+
+						<div class="view-input">
+							<p class="input-name">City</p>
+							<textarea name="" id="" rows="1" cols="30" disabled>Chennai</textarea>
+						</div><br><br>
+
+						<div class="view-input">
+							<p class="input-name">State</p>
+							<textarea name="" id="" rows="1" cols="30" disabled>Tamil Nadu</textarea>
+						</div><br><br>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+		<!-- Customers section ends here  -->
+
+	</body>
+
+	<!-- Javascript connection link  -->
+	<script type="text/javascript" th:src="@{/js/adminScript.js}"></script>
+
+</html>

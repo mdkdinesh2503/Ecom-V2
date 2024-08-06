@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Title name  -->
-	<title> D A S H | S h o p i e . (A) </title>
+	<title> V I E W - R E V W | S h o p i e . (A) </title>
 
 	<!-- Title logo link  -->
 	<link rel="icon" type="image/x-icon" href="./images/Title_Image.png">
@@ -36,7 +36,7 @@
 				<p class="header-name">Shopie.</p>
 			</a>
 
-			<h1>Dashboard</h1>
+			<h1>Edit Admin</h1>
 
 			<a class="header-logout" href="/login" title="Logout">
 				Logout<img src="./images/LogOut.png" alt="->">
@@ -45,77 +45,57 @@
 		</header>
 		<!-- Header section ends here -->
 
-		<!-- Dashboard section starts here  -->
+		<!-- Customers section starts here  -->
 		<div class="main">
 
 			<ul id="sidebar">
-				<li class="activated"><a href="/adminDashboard"><i class="fas fa-home"></i>Dashboard</a></li>
+				<li><a href="/adminDashboard"><i class="fas fa-home"></i>Dashboard</a></li>
 				<li><a href="/adminCustomers"><i class="fas fa-users"></i>Cutomers</a></li>
 				<li><a href="/adminCategories"><i class="fas fa-shopping-basket"></i>Categories</a></li>
 				<li><a href="/adminProducts"><i class="fas fa-shopping-bag"></i>Products</a></li>
 				<li><a href="/adminOrders"><i class="fas fa-shipping-fast"></i>Orders</a></li>
 				<li><a href="/adminPayments"><i class="fas fa-money-check"></i>Payments</a></li>
 				<li><a href="/adminReviews"><i class="fas fa-file-alt"></i>Reviews</a></li>
-				<li><a href="/adminSettings"><i class="fas fa-cog fa-spin"></i>Settings</a></li>
+				<li class="activated"><a href="/adminSettings"><i class="fas fa-cog fa-spin"></i>Settings</a></li>
 			</ul>
 
 			<div class="main-content">
-				<div class="main-content-1">
-					<div class="cards">
-						<i class="fas fa-users"></i>
-						<h1>Customers</h1>
-						<p>50+</p>
-					</div>
-					<div class="cards">
-						<i class="fas fa-shopping-basket"></i>
-						<h1>Categories</h1>
-						<p>22+</p>
-					</div>
-					<div class="cards">
-						<i class="fas fa-shopping-bag"></i>
-						<h1>Products</h1>
-						<p>500+</p>
-					</div>
-					<div class="cards">
-						<i class="fas fa-shipping-fast"></i>
-						<h1>Orders</h1>
-						<p>45+</p>
-					</div>
-					<div class="cards">
-						<i class="fas fa-file-alt"></i>
-						<h1>Reviews</h1>
-						<p>30+</p>
-					</div>
+
+				<div class="header-single add-extra-header">
+
+					<h1><i class="fas fa-user"></i> Edit admin Details</h1>
+
+					<a href="/adminSettings"><i class="fas fa-times"></i></a>
+
 				</div>
 
-				<div class="main-content-2">
-					<div class="main-items">
-						<h2><i class="fas fa-money-check"></i> Total Payables</h2>
-						<div class="payables">
-							<span>Receives</span>
-							<p>25000+</p>
+				<form class="view-seperate"	th:action="@{/process_EditSetting}" method="post"
+								th:object="${EditSettingRequest}">
+
+					<div class="fields">
+
+						<div class="view-input">
+							<p class="input-name">userNAME</p>
+							<textarea th:field="*{username}" name="" id="" rows="1" cols="30" required>Dinesh Kumar M</textarea>
+						</div><br><br>
+
+						<div class="view-input">
+							<p class="input-name">password</p>
+							<textarea th:field="*{password}" name="" id="" rows="1" cols="30" required>mdkdinesh2503@gmail.com</textarea>
 						</div>
-						<div class="payables">
-							<span>Refunds</span>
-							<p>3200+</p>
-						</div>
+
 					</div>
-					<div class="main-items">
-						<h2><i class="fas fa-shopping-basket"></i> Top item categories</h2>
-						<div class="items">
-							<i class="fas fa-tshirt"></i>
-							<i class="fas fa-hat-cowboy"></i>
-							<i class="fas fa-shopping-bag"></i>
-							<i class="fas fa-gamepad"></i>
-							<i class="fas fa-headphones"></i>
-							<i class="fas fa-mask"></i>
-						</div>
+
+					<div class="buttons">
+						<button type="submit" class="btn"><i class="far fa-edit"></i> Edit</button>
 					</div>
-				</div>
+
+				</form>
+
 			</div>
 
 		</div>
-		<!-- Dashboard section ends here  -->
+		<!-- Customers section ends here  -->
 
 	</body>
 

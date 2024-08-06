@@ -1,0 +1,141 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title name  -->
+	<title> A D D - C S T R | S h o p i e . (A) </title>
+
+	<!-- Title logo link  -->
+	<link rel="icon" type="image/x-icon" href="./images/Title_Image.png">
+
+	<!-- Font awesome cdn link  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+	<!-- Font style poppins link -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+
+	<!-- Font style connection link -->
+	<link rel="stylesheet" th:href="@{/css/styleAdmin.css}">
+
+</head>
+
+<body>
+
+	<body>
+
+		<!-- Header section starts here -->
+		<header>
+
+			<a class="header-logo" href="/" title="S h o p i e ."> <img src="./images/Title_Image.png"
+					alt="Header Logo">
+				<p class="header-name">Shopie.</p>
+			</a>
+
+			<h1>Add Customer</h1>
+
+			<a class="header-logout" href="/login" title="Logout">
+				Logout<img src="./images/LogOut.png" alt="->">
+			</a>
+
+		</header>
+		<!-- Header section ends here -->
+
+		<!-- Customers section starts here  -->
+		<div class="main">
+
+			<ul id="sidebar">
+				<li><a href="/adminDashboard"><i class="fas fa-home"></i>Dashboard</a></li>
+				<li class="activated"><a href="/adminCustomers"><i class="fas fa-users"></i>Cutomers</a></li>
+				<li><a href="/adminCategories"><i class="fas fa-shopping-basket"></i>Categories</a></li>
+				<li><a href="/adminProducts"><i class="fas fa-shopping-bag"></i>Products</a></li>
+				<li><a href="/adminOrders"><i class="fas fa-shipping-fast"></i>Orders</a></li>
+				<li><a href="/adminPayments"><i class="fas fa-money-check"></i>Payments</a></li>
+				<li><a href="/adminReviews"><i class="fas fa-file-alt"></i>Reviews</a></li>
+				<li><a href="/adminSettings"><i class="fas fa-cog fa-spin"></i>Settings</a></li>
+			</ul>
+
+			<div class="main-content">
+
+				<form class="add-table" th:action="@{/process_AddCustomer}" method="post"
+					th:object="${AddCustomerRequest}">
+
+					<h1>&#xFF0B;Add Customer</h1>
+
+					<p class="main-input-name">Mobile Number</p>
+
+					<div class="main-input">
+						<i class="fas fa-phone"></i>
+						<input th:field="*{mobile}" type="tel" id="mobile" name="mobile" placeholder="mobile no..."
+							autocomplete="off" onkeyup="mobileValidate()" required>
+					</div>
+
+					<div class="information-error">
+						<p id="mobileSuccessMsg" class="success"><i id="mobileSuccessMsg" class="fas fa-thumbs-up"></i>
+							Correct</p>
+						<p class="error" id="mobileErrorMsg"><i id="mobileErrorMsg"
+								class="fas fa-exclamation-circle"></i>
+							Enter valid Mobile Number!</p>
+					</div>
+
+					<p class="main-input-name">Email</p>
+
+					<div class="main-input">
+						<i class="fas fa-envelope"></i>
+						<input th:field="*{email}" type="email" id="email" name="email" placeholder="email..."
+							autocomplete="off" onkeyup="emailValidate()" required>
+					</div>
+
+					<div class="information-error">
+						<p id="emailSuccessMsg" class="success"><i id="emailSuccessMsg" class="fas fa-thumbs-up"></i>
+							Correct</p>
+						<p class="error" id="emailErrorMsg"><i id="emailErrorMsg" class="fas fa-exclamation-circle"></i>
+							Enter valid Email Id!</p>
+					</div>
+
+					<p class="main-input-name">Password</p>
+
+					<div class="main-input">
+						<i class="fas fa-lock"></i>
+						<input th:field="*{password}" type="text" id="password" name="password"
+							placeholder="password..." autocomplete="off" onkeyup="passwordValidate()" required>
+					</div>
+
+					<div class="information-error">
+						<p id="passSuccessMsg" class="success"><i id="passSuccessMsg" class="fas fa-thumbs-up"></i>
+							Correct
+						</p>
+						<p class="error" id="passErrorMsg"><i id="passErrorMsg" class="fas fa-exclamation-circle"></i>
+							Enter
+							valid Password!</p>
+					</div>
+
+					<div class="buttons">
+
+						<button id="smtbtn" type="submit" class="btn">
+							<i class="fas fa-plus"></i> Create
+						</button>&numsp;
+
+						<a id="cancelbtn" type="submit" href="/adminCustomers" class="btn">
+							<i class="fas fa-times"></i> Cancel
+						</a>
+
+					</div>
+
+				</form>
+
+			</div>
+
+		</div>
+		<!-- Customers section ends here  -->
+
+	</body>
+
+	<!-- Javascript connection link  -->
+	<script type="text/javascript" th:src="@{/js/adminScript.js}"></script>
+
+</html>

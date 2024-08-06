@@ -1,0 +1,162 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title name  -->
+    <title> E D I T - P R D T | S h o p i e . (A) </title>
+
+    <!-- Title logo link  -->
+    <link rel="icon" type="image/x-icon" href="./images/Title_Image.png">
+
+    <!-- Font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Font style poppins link -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+
+    <!-- Font style connection link -->
+    <link rel="stylesheet" href="./styleAdmin.css">
+
+</head>
+
+<body>
+
+    <body>
+
+        <!-- Header section starts here -->
+        <header>
+
+            <a class="header-logo" href="/" title="S h o p i e ."> <img src="./images/Title_Image.png"
+                    alt="Header Logo">
+                <p class="header-name">Shopie.</p>
+            </a>
+
+            <h1>Orders</h1>
+
+            <a class="header-logout" href="/login" title="Logout">
+                Logout<img src="./images/LogOut.png" alt="->">
+            </a>
+
+        </header>
+        <!-- Header section ends here -->
+
+        <!-- Customers section starts here  -->
+        <div class="main">
+
+            <ul id="sidebar">
+                <li><a href="adminDashboard"><i class="fas fa-home"></i>Dashboard</a></li>
+                <li><a href="adminCustomers"><i class="fas fa-users"></i>Cutomers</a></li>
+                <li><a href="adminCategories"><i class="fas fa-shopping-basket"></i>Categories</a></li>
+                <li><a href="adminProducts"><i class="fas fa-shopping-bag"></i>Products</a></li>
+                <li class="activated"><a href="adminOrders"><i class="fas fa-shipping-fast"></i>Orders</a></li>
+                <li><a href="adminPayments"><i class="fas fa-money-check"></i>Payments</a></li>
+                <li><a href="adminReviews"><i class="fas fa-file-alt"></i>Reviews</a></li>
+                <li><a href="adminSettings"><i class="fas fa-cog fa-spin"></i>Settings</a></li>
+            </ul>
+
+            <div class="main-content">
+
+                <div class="header-single add-extra-header">
+
+                    <h1><i class="fas fa-shipping-fast"></i> Order Details</h1>
+
+                    <a href="adminOrders"><i class="fas fa-times"></i></a>
+
+                </div>
+
+                <form class="view-data">
+
+                    <div class="fields">
+
+                        <div class="view-input">
+                            <p class="input-name">Order id</p>
+                            <input type="number" required value="5214" />
+                        </div><br><br>
+
+                        <div class="view-input">
+                            <p class="input-name">title</p>
+                            <textarea name="" id="" rows="4" cols="40"
+                                required>NIKE GOKU AND LUFFY PULLOVER HOODIE – THE GEEK GIFTS</textarea>
+                        </div><br><br>
+
+                        <div class="view-input">
+                            <p class="input-name">description</p>
+                            <textarea name="" id="" rows="6" cols="40"
+                                required>seeeeeeeeffffffffffffffffffffffffffffffffNike Goku And Luffy Pullover Hoodie – The Geek Giftsffffffffffffffffdfdfdfdf</textarea>
+                        </div><br><br>
+
+                        <div class="view-input">
+                            <p class="input-name">price</p>
+                            <input type="number" required value="877" />
+                        </div>
+
+                    </div>
+
+                    <div class="fields">
+
+                        <div class="view-input">
+                            <p class="input-name">discount</p>
+                            <input type="number" required value="47" />
+                        </div><br><br>
+
+                        <div class="view-input">
+                            <p class="input-name">category</p>
+                            <select name="category" id="category" required>
+                                <option disabled selected class="disabled">Select category</option>
+                                <option value="Grocery">Grocery</option>
+                                <option value="Mobiles">Mobiles</option>
+                                <option value="Fashion">Fashion</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Furnitures">Furnitures</option>
+                                <option value="Appliances">Appliances</option>
+                                <option value="Toys">Toys</option>
+                            </select>
+                        </div><br><br>
+
+                        <div class="view-input">
+                            <p class="input-name">available</p>
+                            <input type="number" required value="80" />
+                        </div><br><br>
+
+                        <div class="view-input">
+                            <p class="input-name">rating</p>
+                            <input type="number" required value="4" />
+                        </div><br><br>
+
+                        <div class="view-input">
+                            <p class="input-name">Reviews</p>
+                            <input type="number" required value="255" />
+                        </div><br><br>
+
+                        <div class="view-input">
+                            <p class="input-name">image</p>
+                            <input type="file" name="image" id="image" placeholder="image..." autocomplete="off"
+                            required />
+                        </div>
+
+                    </div>
+                    
+                    <div></div>
+
+                    <div class="buttons">
+                        <button type="submit" class="btn"><i class="fas fa-edit"></i> Edit data</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+        <!-- Customers section ends here  -->
+
+    </body>
+
+    <!-- Javascript connection link  -->
+    <script src="./adminScript.js"></script>
+
+</html>
